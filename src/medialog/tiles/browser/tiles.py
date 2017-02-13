@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 
-#from zope.interface import provider
+from zope.interface import provider
 from plone import api
 from plone.app.textfield import RichText
-#from plone.app.tiles.browser.add import DefaultAddForm
-#from plone.app.tiles.browser.add import DefaultAddView
-#from plone.app.tiles.browser.edit import DefaultEditForm
-#from plone.app.tiles.browser.edit import DefaultEditView
+from plone.app.tiles.browser.add import DefaultAddForm
+from plone.app.tiles.browser.add import DefaultAddView
+from plone.app.tiles.browser.edit import DefaultEditForm
+from plone.app.tiles.browser.edit import DefaultEditView
 #from plone.directives import form
 from plone.memoize.view import memoize
 from plone.supermodel import model
