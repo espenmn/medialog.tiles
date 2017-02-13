@@ -1,0 +1,12 @@
+<html>
+<body>
+<div class="${view/data/css_class}">
+ <div class="lrtextbox" tal:condition="view/data/body">${view/data/body}</siv>
+  <div tal:define="imagenocall:view/data/image"
+     tal:condition="nocall:image">
+    <img tal:replace="structure context/@@images/image/large" />
+  </div>
+</div>  
+
+ </body>
+</html>
