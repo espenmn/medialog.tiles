@@ -4,7 +4,7 @@
  <div class="lrtextbox" tal:condition="view/body">${view/body}</div>
   <div tal:define="imagenocall:view/image"
      tal:condition="nocall:image">
-    <img tal:replace="structure context/@@images/image/large" />
+    <img tal:replace="structure view/@@images/image/large" />
   </div>
 </div>  
 
