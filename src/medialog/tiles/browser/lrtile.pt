@@ -1,11 +1,11 @@
 <html>
 <body>
 <div class="${view/css_class}">
- <div class="lrtextbox" tal:condition="view/body">${view/body}</div>
+ <!-- div class="lrtextbox" tal:condition="view/body">${view/body}</div>
   <div tal:define="imagenocall:view/image"
      tal:condition="nocall:image">
     <img tal:replace="structure view/@@images/image/large" />
-  </div>
+  </div-->
 </div>  
 
  </body>
