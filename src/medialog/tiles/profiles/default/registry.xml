@@ -10,13 +10,14 @@
  <element>medialog.tiles.lrtile</element>
  </value>
 </record>
+
 <record name="plone.app.tiles">
  <field type="plone.registry.field.List">
  <title>Tiles</title>
  <value_type type="plone.registry.field.TextLine" />
  </field>
  <value purge="false">
- <element>medialog.tiles.accordiontile</value>
+ <element>medialog.tiles.accordiontile</element>
  </value>
  </record>
 
