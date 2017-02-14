@@ -58,7 +58,7 @@
         template="lrtile.pt"
         permission="zope2.View"
         add_permission="cmf.ModifyPortalContent"
-        layer="Medialog.tiles.interfaces.IMedialogTilesLayer"
+        layer="medialog.tiles.interfaces.IMedialogTilesLayer"
         />
         
 </configure>
