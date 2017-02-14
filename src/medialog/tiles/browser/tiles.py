@@ -3,7 +3,9 @@
 from plone.supermodel import model
 from plone.tiles import Tile
 from zope import schema
+from zope.i18nmessageid import MessageFactory
 
+_ = MessageFactory('medialog.tiles')
 
 class MyTile(Tile):
     def __call__(self):
@@ -38,7 +40,7 @@ from plone.tiles.interfaces import ITileType
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 from zope.component import queryMultiAdapter
-from zope.i18nmessageid import MessageFactory
+
 from zope.interface import implementer
 from zope.interface import provider
 from zope.publisher.browser import BrowserView
@@ -46,6 +48,8 @@ from zope.schema import getFields
 from zope.traversing.browser.absoluteurl import absoluteURL
 
 
+
+ 
 #from medialog.iconpicker.widgets.widget import IconPickerFieldWidget
 #from medialog.iconpicker.widgets.widget import ColorPickerFieldWidget
 #from medialog.iconpicker.interfaces import IIconPickerSettings
