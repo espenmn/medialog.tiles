@@ -3,6 +3,7 @@
 	<div>Zone 4</div>
 	<div>80–90 % MAX HR</DIV>
 	<div>X</div>
+	<div tal:content="view/data/sometext" />
 	<div class="accordian_hidden">
 		div tal:replace="structure view/data/body" 
 </div>
