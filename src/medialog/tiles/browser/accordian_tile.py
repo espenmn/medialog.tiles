@@ -16,7 +16,6 @@ from zope.i18nmessageid import MessageFactory
 #from zope.interface import provider
 
 
-#????
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from zope.publisher.browser import BrowserView
 from zope.schema import getFields
@@ -27,18 +26,21 @@ _ = MessageFactory('medialog.iconpicker')
 
 
 class IAccordianTile(model.Schema):
-   sometext = schema.Text(
-   title=u"Select an object",   # XXX replace this with a message factory
-   required=True,
+    import pdb; pdb.set_trace()
+    sometext = schema.Text(
+    title=u"Select an object",   # XXX replace this with a message factory
+    required=True,
    )
    
 class AccordianTile(Tile):
     """ An expanding tile """
 
     def __init__(self, context, request):
+        importpdb; pdb.set_trace()
         super(AccordionTile, self).__init__(context, request)
     
     @property
     def data(self):
+        import pdb; pdb.set_trace()
         data = super(AccordionTile, self).data
         return data
