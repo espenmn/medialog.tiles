@@ -17,9 +17,28 @@
  <value_type type="plone.registry.field.TextLine" />
  </field>
  <value purge="false">
- <element>medialog.tiles.accordiontile</element>
+   <element>medialog.tiles.accordiontile</element>
+ </value>
+ <value purge="false">
+   <element>medialog.tiles.sampletile"</element>
  </value>
  </record>
+
+
+
+<records prefix="plone.app.mosaic.app_tiles.sampletile"
+ interface="plone.app.mosaic.interfaces.ITile">
+ <value key="name">medialog.tiles.sampletile</value>
+ <value key="label">Sample Tile</value>
+ <value key="category">advanced</value>
+ <value key="tile_type">app</value>
+ <value key="default_value"></value>
+ <value key="read_only">false</value>
+ <value key="settings">true</value>
+ <value key="favorite">false</value>
+ <value key="rich_text">false</value>
+ <value key="weight">10</value>
+</records>
 
 
 
@@ -34,7 +53,7 @@
  <value key="settings">true</value>
  <value key="favorite">false</value>
  <value key="rich_text">false</value>
- <value key="weight">20</value>
+ <value key="weight">15</value>
 </records>
 
 

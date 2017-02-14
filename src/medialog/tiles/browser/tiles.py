@@ -1,5 +1,25 @@
 # -*- coding: utf-8 -*-
 
+from plone.supermodel import model
+from plone.tiles import Tile
+from zope import schema
+
+
+class MyTile(Tile):
+    def __call__(self):
+        return u'<html><body><p>Hello world</p></body></html>'
+
+
+
+class IMyTile(model.Schema):
+    iconfield = schema.TextLine(
+        title = _("icon", default=u"Icon"),
+        required = False,
+        description = _("help_icon",
+                      default="Choose Icon"),
+        )
+    
+
 from plone import api
 from plone.app.textfield import RichText
 from plone.app.tiles.browser.add import DefaultAddForm
@@ -16,7 +36,7 @@ from plone.tiles.interfaces import ITile
 from plone.tiles.interfaces import ITileDataManager
 from plone.tiles.interfaces import ITileType
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from zope import schema
+
 from zope.component import queryMultiAdapter
 from zope.i18nmessageid import MessageFactory
 from zope.interface import implementer
