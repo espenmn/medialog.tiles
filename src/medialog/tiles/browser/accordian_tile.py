@@ -26,7 +26,6 @@ _ = MessageFactory('medialog.iconpicker')
 
 
 class IAccordianTile(model.Schema):
-    import pdb; pdb.set_trace()
     sometext = schema.Text(
     title=u"Select an object",   # XXX replace this with a message factory
     required=True,
