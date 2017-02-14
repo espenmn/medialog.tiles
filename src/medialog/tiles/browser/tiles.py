@@ -49,7 +49,7 @@ class ILRTile(model.Schema):
                       default="Float left or right?"),
     )
     
-    body = RichText(title = _(u"body_text", default=u"Body text"),
+    body = TextLine(title = _(u"body_text", default=u"Body text"),
         required = False,
         description = _("body_icon",
                       default="Body text"),
