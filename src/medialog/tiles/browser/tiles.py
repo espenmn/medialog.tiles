@@ -13,7 +13,7 @@ class MyTile(Tile):
 
 
 
-class IMyTile(model.Schema):
+class IMyTileSchema(model.Schema):
     iconfield = schema.TextLine(
         title = _("icon", default=u"Icon"),
         required = False,
