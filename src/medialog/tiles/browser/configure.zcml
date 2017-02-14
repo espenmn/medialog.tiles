@@ -33,10 +33,10 @@
     title="Accordion Tile"
     description="Expanding tile"
     add_permission="cmf.ModifyPortalContent"
-    class=".accordian_tile.AccordianTile"
+    class=".accordian_tile.AccordionTile"
     for="*"
     permission="zope.Public"
-    schema=".accordian_tile.IAccordianTile"
+    schema=".accordian_tile.IAccordionTile"
     template="templates/accordian_tile.pt"
     />
  

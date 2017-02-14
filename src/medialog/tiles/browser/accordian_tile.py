@@ -1,41 +1,33 @@
 # -*- coding: utf-8 -*-
 
-from plone import api
-from plone.app.textfield import RichText
-from plone.app.tiles.browser.add import DefaultAddForm
-from plone.app.tiles.browser.add import DefaultAddView
-from plone.app.tiles.browser.edit import DefaultEditForm
-from plone.app.tiles.browser.edit import DefaultEditView
-from plone.memoize.view import memoize
-from plone.namedfile.field import NamedBlobImage
-from plone.supermodel import model
-from plone.tiles import Tile
-from plone.tiles.data import TransientTileDataManager
-from plone.tiles.interfaces import IPersistentTile
-from plone.tiles.interfaces import ITile
-from plone.tiles.interfaces import ITileDataManager
-from plone.tiles.interfaces import ITileType
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from zope import schema
-from zope.component import queryMultiAdapter
-from zope.i18nmessageid import MessageFactory
+#from plone.app.standardtiles.contentlisting import ContentListingTile, DefaultQuery as baseDefaultQuery, DefaultSortOn as baseDefaultSortOn
+#from plone.app.z3cform.widget import QueryStringFieldWidget
+#from plone.autoform.directives import widget
 from zope.interface import implementer
-from zope.interface import provider
+from zope.component import adapter
+#from plone.app.imaging.interfaces import IImageScaling
+from plone.supermodel import model
+#from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
+from z3c.form.interfaces import IValue
+from z3c.form.util import getSpecification
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+#from zope.component import queryUtility, getMultiAdapter, queryMultiAdapter
 from zope.publisher.browser import BrowserView
 from zope.schema import getFields
-from zope.traversing.browser.absoluteurl import absoluteURL
+from zope import schema
+from plone.tiles import Tile
+from plone.tiles.interfaces import ITileType
+
+#_ = MessageFactory('medialog.tiles')
 
 
-_ = MessageFactory('medialog.tiles')
-
-
-class IAccordianTile(model.Schema):
+class IAccordionTile(model.Schema):
     sometext = schema.Text(
     title=u"Select an object",   # XXX replace this with a message factory
     required=True,
    )
    
-class AccordianTile(Tile):
+class AccordionTile(Tile):
     """ An expanding tile """
 
     def __init__(self, context, request):
@@ -45,3 +37,8 @@ class AccordianTile(Tile):
     def data(self):
         data = super(AccordionTile, self).data
         return data
+
+#    def getUID(self):
+#        return self.request.get('URL').split('/')[-1]
+
+           
