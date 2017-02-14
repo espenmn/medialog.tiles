@@ -55,10 +55,7 @@ class ILRTile(model.Schema):
                       default="Body text"),
     )
     
-    image = NamedBlobImage(
-        title=_(u"Please upload an image"),
-        required=False,
-    )
+
 
 class LRTile(Tile):
     """A tile that displays icon and some text"""
