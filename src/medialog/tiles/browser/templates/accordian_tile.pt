@@ -1,9 +1,10 @@
 <div class="accordion">
 <div class="accordian_title flex">
 	<div>Zone 4</div>
-	<div>80–90 % MAX HR</DIV>
+	<div>80–90 % MAX HR</div>
 	<div>X</div>
-	<div tal:content="view/data/sometext" />
+	<div tal:condition="view/data/sometext">${view/data/something}</div>
 	<div class="accordian_hidden">
 		div tal:replace="structure view/data/body" 
+	</div>
 </div>
