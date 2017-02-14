@@ -36,7 +36,7 @@ class AccordianTile(Tile):
     """ An expanding tile """
 
     def __init__(self, context, request):
-        importpdb; pdb.set_trace()
+        import pdb; pdb.set_trace()
         super(AccordionTile, self).__init__(context, request)
     
     @property
