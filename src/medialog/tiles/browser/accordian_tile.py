@@ -1,24 +1,29 @@
 # -*- coding: utf-8 -*-
 
 from plone import api
+from plone.app.textfield import RichText
 from plone.app.tiles.browser.add import DefaultAddForm
 from plone.app.tiles.browser.add import DefaultAddView
 from plone.app.tiles.browser.edit import DefaultEditForm
 from plone.app.tiles.browser.edit import DefaultEditView
 from plone.memoize.view import memoize
+from plone.namedfile.field import NamedBlobImage
 from plone.supermodel import model
 from plone.tiles import Tile
 from plone.tiles.data import TransientTileDataManager
+from plone.tiles.interfaces import IPersistentTile
+from plone.tiles.interfaces import ITile
 from plone.tiles.interfaces import ITileDataManager
-from zope import schema
-from zope.i18nmessageid import MessageFactory
-#from zope.interface import provider
-
-
+from plone.tiles.interfaces import ITileType
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from zope import schema
+from zope.component import queryMultiAdapter
+from zope.i18nmessageid import MessageFactory
+from zope.interface import implementer
+from zope.interface import provider
 from zope.publisher.browser import BrowserView
 from zope.schema import getFields
-from plone.tiles.interfaces import ITileType
+from zope.traversing.browser.absoluteurl import absoluteURL
 
 
 _ = MessageFactory('medialog.tiles')
