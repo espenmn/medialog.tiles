@@ -46,9 +46,6 @@ from zope.schema import getFields
 from zope.traversing.browser.absoluteurl import absoluteURL
 
 
-_ = MessageFactory('medialog.tiles')
-
- 
 #from medialog.iconpicker.widgets.widget import IconPickerFieldWidget
 #from medialog.iconpicker.widgets.widget import ColorPickerFieldWidget
 #from medialog.iconpicker.interfaces import IIconPickerSettings
