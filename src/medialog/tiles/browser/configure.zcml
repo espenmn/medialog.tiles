@@ -15,15 +15,20 @@
       />
       
  
-    
-  <!-- Include our dependencies -->
-  <include package="plone.app.tiles" />
-  <include package="zope.component" file="meta.zcml" />
-  <include package="zope.security" file="meta.zcml" />
-
   <include package="plone.app.mosaic" />
-  <include package="plone.tiles" file="meta.zcml" />
-  
+
+  <plone:tile
+    name="medialog.tiles.accordion"
+    title="Accordion Tile"
+    description="Expanding tile"
+    add_permission="cmf.ModifyPortalContent"
+    class=".accordian_tile.AccordianTile"
+    for="*"
+    permission="zope.Public"
+    schema=".accordian_tile.IAccordianTile"
+    template="templates/accordian_tile.pt"
+    />
+ 
 
   <plone:tile
         name="medialog.tiles.LRtile"

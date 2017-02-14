@@ -63,6 +63,12 @@ class LRTile(Tile):
 
     def __init__(self, context, request):
         super(LRTile, self).__init__(context, request)
+                
+    @property
+    def data(self):
+        data = super(LRTile, self).data
+        return data
+
         
     @property
     def css_class(self):
