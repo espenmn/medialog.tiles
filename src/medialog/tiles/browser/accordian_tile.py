@@ -7,7 +7,6 @@ from plone.app.tiles.browser.edit import DefaultEditForm
 from plone.app.tiles.browser.edit import DefaultEditView
 from plone.memoize.view import memoize
 from plone.supermodel import model
-from plone.directives import form
 from plone.tiles import Tile
 from plone.tiles.data import TransientTileDataManager
 from plone.tiles.interfaces import ITileDataManager
@@ -22,7 +21,7 @@ from zope.schema import getFields
 from plone.tiles.interfaces import ITileType
 
 
-_ = MessageFactory('medialog.iconpicker')
+_ = MessageFactory('medialog.tiles')
 
 
 class IAccordianTile(model.Schema):
@@ -39,6 +38,5 @@ class AccordianTile(Tile):
     
     @property
     def data(self):
-        import pdb; pdb.set_trace()
         data = super(AccordionTile, self).data
         return data
