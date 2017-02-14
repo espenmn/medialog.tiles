@@ -43,8 +43,7 @@ setup(
         'setuptools',
         'z3c.jbot',
         'plone.app.dexterity',
-        'plone.app.mosaic'
-        'plone.app.dexterity',
+        'plone.app.mosaic',
         'plone.directives.form', 
     ],
     extras_require={
