@@ -1,9 +1,21 @@
 # -*- coding: utf-8 -*-
 
 from plone.supermodel import model
+from zope.i18nmessageid import MessageFactory
+from plone.app.tiles.browser.add import DefaultAddForm
+from plone.app.tiles.browser.add import DefaultAddView
+from plone.app.tiles.browser.edit import DefaultEditForm
+from plone.app.tiles.browser.edit import DefaultEditView
+from plone.memoize.view import memoize
+from plone.directives import form
 from plone.tiles import Tile
+from plone.tiles.data import TransientTileDataManager
+from plone.tiles.interfaces import ITileDataManager
 from zope import schema
 from zope.i18nmessageid import MessageFactory
+#from zope.interface import provider
+
+
 
 _ = MessageFactory('medialog.tiles')
 
@@ -21,39 +33,6 @@ class IMyTileSchema(model.Schema):
                       default="Choose Icon"),
         )
     
-
-from plone import api
-from plone.app.textfield import RichText
-from plone.app.tiles.browser.add import DefaultAddForm
-from plone.app.tiles.browser.add import DefaultAddView
-from plone.app.tiles.browser.edit import DefaultEditForm
-from plone.app.tiles.browser.edit import DefaultEditView
-from plone.memoize.view import memoize
-from plone.namedfile.field import NamedBlobImage
-from plone.supermodel import model
-from plone.tiles import Tile
-from plone.tiles.data import TransientTileDataManager
-from plone.tiles.interfaces import IPersistentTile
-from plone.tiles.interfaces import ITile
-from plone.tiles.interfaces import ITileDataManager
-from plone.tiles.interfaces import ITileType
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-
-from zope.component import queryMultiAdapter
-
-from zope.interface import implementer
-from zope.interface import provider
-from zope.publisher.browser import BrowserView
-from zope.schema import getFields
-from zope.traversing.browser.absoluteurl import absoluteURL
-
-
-
- 
-#from medialog.iconpicker.widgets.widget import IconPickerFieldWidget
-#from medialog.iconpicker.widgets.widget import ColorPickerFieldWidget
-#from medialog.iconpicker.interfaces import IIconPickerSettings
-
 
 class ILRTile(model.Schema):
     iconfield = schema.TextLine(
