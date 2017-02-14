@@ -38,7 +38,7 @@
     add_permission="cmf.ModifyPortalContent"
     class=".accordian_tile.AccordionTile"
     for="*"
-    permission="zope2.View
+    permission="zope2.View"
     schema=".accordian_tile.IAccordionTile"
     template="templates/accordian_tile.pt"
     layer="*"
