@@ -57,7 +57,7 @@
         />
         
     <plone:tile
-        name="medialog.tiles.infoitile"
+        name="medialog.tiles.infotile"
         title="Info tile"
         description="Displays info and link"
         for="*"
