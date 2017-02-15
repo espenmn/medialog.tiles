@@ -2,7 +2,7 @@
 	<div class="inner_colorbox">
 		<i class="fa iconfont $(view/data/icon}"> </i>
 		<h3>${view/data/title}</h3>
-		<p>{${view/data/body/output}</p>
+		<p>${view/data/body/output}</p>
 
 	<a  class="roundbutton" href="${view/data/link}"></a>
 	</div>
