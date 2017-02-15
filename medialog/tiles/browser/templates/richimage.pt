@@ -1,6 +1,6 @@
-<div class="flex container ${view/data/css_class}">
+<div class="flex container ${view/css_class}">
 	<div class="half">
-	   <div tal:content="view/data/body/output">
+	   <div tal:content="structure view/body/output">
 	</div>
 	<div class="half">
 	   Image
