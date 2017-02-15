@@ -1,0 +1,26 @@
+<div class="flex  six_icons">
+	<div class="icon">
+		<i>ICON 1</i>
+		<p>text</p>
+	</div>
+	<div class="icon">
+		<i>ICON 2</i>
+		<p>text</p>
+	</div>
+	<div class="icon">
+		<i>ICON 3</i>
+		<p>text</p>
+	</div>
+	<div class="icon">
+		<i>ICON 4</i>
+		<p>text</p>
+	</div>
+	<div class="icon">
+		<i>ICON 5</i>
+		<p>text</p>
+	</div>
+	<div class="icon">
+		<i>ICON 6</i>
+		<p>text</p>
+	</div>
+</div>

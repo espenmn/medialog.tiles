@@ -27,7 +27,7 @@
         for="*"
         schema=".tiles.IMultiTile"
         class=".tiles.MultiTile"
-        template="multitile.pt"
+        template="templates/richimage.pt"
         permission="zope2.View"
         add_permission="cmf.ModifyPortalContent"
         />

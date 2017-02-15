@@ -1,0 +1,8 @@
+<div class="flex container ${view/data/css_class}">
+	<div class="half">
+	   Tekst
+	</div>
+	<div class="half">
+	   Image
+	</div>
+</div>

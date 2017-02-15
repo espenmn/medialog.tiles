@@ -27,12 +27,13 @@ from collective.z3cform.datagridfield import DataGridFieldFactory
 from collective.z3cform.datagridfield import DictRow
 
 
+from plone.app.textfield import RichText
+from plone.app.textfield.value import RichTextValue
+
+
 _ = MessageFactory('medialog.tiles')
 
  
- 
-
-
  
     
 class IMultiTile(model.Schema):
@@ -42,6 +43,10 @@ class IMultiTile(model.Schema):
         required = False,
         description = _("help_css_class",
                       default="CSS Class"),
+    )
+    
+    body = RichText(title=u"Rich text",
+        
     )
     
     
