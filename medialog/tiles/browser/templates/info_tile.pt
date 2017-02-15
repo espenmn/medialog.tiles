@@ -1,4 +1,4 @@
-<div class="infobox" background="view/data/image">
+<div class="infobox" background="${view/data/image}">
     <h3>${view/data/title}</h3>
     <p tal:replace="structure view/data/body/output"/>
     <a class="roundbutton" href="${view/data/link}">${view/data/moretext}</<a>
