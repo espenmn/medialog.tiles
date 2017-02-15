@@ -1,9 +1,9 @@
 <div class="colorboxes">
 	<div class="inner_colorbox">
-		<i class="fa iconfont fa-rotate-right"> </i>
-		<h3>Bike Console</h3>
-		<p>In-time touchscreen for modern instructors</p>
+		<i class="fa iconfont $(view/data/icon}"> </i>
+		<h3>${view/data/title}</h3>
+		<p>{$/view/data/text}</p>
 
-	<a  class="roundbutton" href="/read/more">Read More</a>
+	<a  class="roundbutton" href="${view/data/link}"></a>
 	</div>
 </div>
