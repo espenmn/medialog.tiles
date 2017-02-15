@@ -1,3 +1,4 @@
+<registry>
 <record name="plone.app.tiles">
  <field type="plone.registry.field.List">
  <title>Tiles</title>
