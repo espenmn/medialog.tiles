@@ -110,6 +110,11 @@ class IReadmoreTile(model.Schema):
 
 class IInfoTile(model.Schema):
     
+    title=schema.TextLine (
+        title=_(u'Title'),
+        required=True,
+    )
+    
     moretext=schema.TextLine (
         title=_(u'Title'),
         required=True,
