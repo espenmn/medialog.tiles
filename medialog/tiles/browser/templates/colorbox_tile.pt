@@ -3,6 +3,6 @@
 		<i class="fa iconfont $(view/data/icon}"> </i>
 		<h3>${view/data/title}</h3>
 		<div tal:replace="structure view/data/body/output" />
-	<a  class="roundbutton" href="${view/data/link}"></a>
+	<a  class="roundbutton" href="${view/data/link}">${view/data/moretext}</a>
 	</div>
 </div>
