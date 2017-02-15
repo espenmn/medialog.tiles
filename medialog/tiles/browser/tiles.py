@@ -115,12 +115,13 @@ class IInfoTile(model.Schema):
         required=True,
     )
     
+    
     body = RichText(title=u"Rich text",
         
     )
     
     moretext=schema.TextLine (
-        title=_(u'Title'),
+        title=_(u'Readmore text'),
         required=True,
     )
     
