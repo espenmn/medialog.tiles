@@ -88,7 +88,7 @@ class IColorboxTile(model.Schema):
     )
     
     moretext=schema.TextLine (
-        title=_(u'Title'),
+        title=_(u'Readmore text'),
         required=True,
     )
     
@@ -113,6 +113,10 @@ class IInfoTile(model.Schema):
     title=schema.TextLine (
         title=_(u'Title'),
         required=True,
+    )
+    
+    body = RichText(title=u"Rich text",
+        
     )
     
     moretext=schema.TextLine (
