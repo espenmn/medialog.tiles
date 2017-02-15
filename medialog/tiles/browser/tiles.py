@@ -40,11 +40,12 @@ _ = MessageFactory('medialog.tiles')
     
 class IMultiTile(model.Schema):
     
-    css_class =schema.TextLine(
+    css_class =schema.Choice(
         title = _("css class", default=u"CSS class"),
         required = False,
         description = _("help_css_class",
                       default="CSS Class"),
+        values=("left", "right"),
     )
     
     body = RichText(title=u"Rich text",
