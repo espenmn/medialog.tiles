@@ -2,8 +2,7 @@
 	<div class="inner_colorbox">
 		<i class="fa iconfont $(view/data/icon}"> </i>
 		<h3>${view/data/title}</h3>
-		<p>${view/data/body/output}</p>
-
+		<div tal:replace="structure view/data/body/output" />
 	<a  class="roundbutton" href="${view/data/link}"></a>
 	</div>
 </div>
