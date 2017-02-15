@@ -1,34 +1,36 @@
 # -*- coding: utf-8 -*-
 
-from plone import api
-from plone.app.tiles.browser.add import DefaultAddForm
-from plone.app.tiles.browser.add import DefaultAddView
-from plone.app.tiles.browser.edit import DefaultEditForm
-from plone.app.tiles.browser.edit import DefaultEditView
+#from plone import api
+#from plone.app.tiles.browser.add import DefaultAddForm
+#from plone.app.tiles.browser.add import DefaultAddView
+#from plone.app.tiles.browser.edit import DefaultEditForm
+#from plone.app.tiles.browser.edit import DefaultEditView
 from plone.memoize.view import memoize
 from plone.supermodel import model
-from plone.directives import form
-from plone.tiles import Tile
-from plone.tiles.data import TransientTileDataManager
-from plone.tiles.interfaces import ITileDataManager
+#from plone.directives import form
+#from plone.tiles import Tile
+from plone.tiles import PersistentTile
+#from plone.tiles.data import TransientTileDataManager
+#from plone.tiles.interfaces import ITileDataManager
 from zope import schema
 from zope.i18nmessageid import MessageFactory
 #from zope.interface import provider
 
 
 #????
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from zope.publisher.browser import BrowserView
-from zope.schema import getFields
-from plone.tiles.interfaces import ITileType
+#from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+#from zope.publisher.browser import BrowserView
+#from zope.schema import getFields
+#from plone.tiles.interfaces import ITileType
 
 
-from collective.z3cform.datagridfield import DataGridFieldFactory 
-from collective.z3cform.datagridfield import DictRow
+#from collective.z3cform.datagridfield import DataGridFieldFactory 
+#from collective.z3cform.datagridfield import DictRow
 
 
 from plone.app.textfield import RichText
 from plone.app.textfield.value import RichTextValue
+from plone.namedfile.field import NamedBlobFile
 
 
 _ = MessageFactory('medialog.tiles')
@@ -49,8 +51,14 @@ class IMultiTile(model.Schema):
         
     )
     
+    image = NamedBlobFile(
+        title=_(u'Please, upload an image'),
+    )
     
-class MultiTile(Tile):
+    
+    
+    
+class MultiTile(PersistentTile):
     """A tile that displays image and richtext"""
 
     def __init__(self, context, request):
