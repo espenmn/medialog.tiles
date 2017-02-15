@@ -1,6 +1,3 @@
 <div class="infobox"
-     background="/@@images/image/preview">
-    <h3>${view/data/title}</h3>
-    <tal:body tal:replace="structure view/data/body/output"/>
-    <a class="roundbutton" href="${view/data/link}">${view/data/moretext}</<a>
+     >
 </div>
