@@ -139,7 +139,7 @@ class MultiTile(PersistentTile):
 class AccordionTile(MultiTile):
     """A tile that displays accordion"""
     
-class ColorBoxTile(MultiTile):
+class ColorboxTile(MultiTile):
     """A tile that displays a box"""
     
 class InfoTile(MultiTile):
