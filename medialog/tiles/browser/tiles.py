@@ -55,8 +55,73 @@ class IMultiTile(model.Schema):
     image = NamedBlobFile(
         title=_(u'Please, upload an image'),
     )
+
+class IAccordionTile(model.Schema):
     
+    zone=schema.TextLine (
+         title=_(u'Zone'),
+        required=True,
+    )
+    title=schema.TextLine (
+        title=_(u'Title'),
+        required=True,
+    )
     
+    body = RichText(title=u"Rich text",
+        
+    )
+
+class IColorboxTile(model.Schema):
+    
+    icon=schema.TextLine (
+        title=_(u'Icon'),
+        required=True,
+    )
+    
+    title=schema.TextLine (
+        title=_(u'Title'),
+        required=True,
+    )
+    
+    body = RichText(title=u"Rich text",
+        
+    )
+    
+    moretext=schema.TextLine (
+        title=_(u'Title'),
+        required=True,
+    )
+    
+    link = schema.URI(title=u"Link",
+        
+    )
+    
+
+class IReadmoreTile(model.Schema):
+    
+    moretext=schema.TextLine (
+        title=_(u'Title'),
+        required=True,
+    )
+    
+    link = schema.URI(title=u"Link",
+        
+    )
+
+class IInfoTile(model.Schema):
+    
+    moretext=schema.TextLine (
+        title=_(u'Title'),
+        required=True,
+    )
+    
+    image = NamedBlobFile(
+        title=_(u'Please, upload an image'),
+    )
+    
+    link = schema.URI(title=u"Link",
+        
+    )
     
     
 class MultiTile(PersistentTile):
@@ -69,5 +134,17 @@ class MultiTile(PersistentTile):
     def data(self):
         data = super(MultiTile, self).data
         return data
+
         
-     
+class AccordionTile(MultiTile):
+    """A tile that displays accordion"""
+    
+class ColorBoxTile(MultiTile):
+    """A tile that displays a box"""
+    
+class InfoTile(MultiTile):
+    """A tile that displays image and richtext"""
+    
+class ReadmoreTile(MultiTile):
+    """A tile that displays image and richtext"""
+    

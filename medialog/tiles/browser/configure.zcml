@@ -32,5 +32,52 @@
         add_permission="cmf.ModifyPortalContent"
         />
 
+    <plone:tile
+        name="medialog.tiles.accordiontile"
+        title="Accordion tile"
+        description="Displays accordion"
+        for="*"
+        schema=".tiles.IAccordionTile"
+        class=".tiles.AccordionTile"
+        template="templates/accordion_tile.pt"
+        permission="zope2.View"
+        add_permission="cmf.ModifyPortalContent"
+        />
+
+    <plone:tile
+        name="medialog.tiles.colorboxtile"
+        title="Colorbox"
+        description="Displays box with richtext"
+        for="*"
+        schema=".tiles.ColorboxTile"
+        class=".tiles.ColorboxTile"
+        template="templates/colorbox_tile.pt"
+        permission="zope2.View"
+        add_permission="cmf.ModifyPortalContent"
+        />
+        
+    <plone:tile
+        name="medialog.tiles.infoitile"
+        title="Info tile"
+        description="Displays info and link"
+        for="*"
+        schema=".tiles.IInfoTile"
+        class=".tiles.InfoTile"
+        template="templates/info_tile.pt"
+        permission="zope2.View"
+        add_permission="cmf.ModifyPortalContent"
+        />
+        
+    <plone:tile
+        name="medialog.tiles.readmoretile"
+        title="Readmore tile"
+        description="Displays button with link"
+        for="*"
+        schema=".tiles.IReadmoreTile"
+        class=".tiles.ReadmoreTile"
+        template="templates/readmore_tile.pt"
+        permission="zope2.View"
+        add_permission="cmf.ModifyPortalContent"
+        />
  
 </configure>

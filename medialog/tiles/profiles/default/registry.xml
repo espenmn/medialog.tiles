@@ -7,7 +7,18 @@
  <value purge="false">
    <element>medialog.tiles.multitile</element>
  </value>
- 
+ <value purge="false">
+     <element>medialog.tiles.accordiontile</element>
+ </value>
+ <value purge="false">
+     <element>medialog.tiles.colorboxtile</element>
+ </value>
+ <value purge="false">
+     <element>medialog.tiles.infotile</element>
+ </value>
+ <value purge="false">
+     <element>medialog.tiles.readmoretile</element>
+ </value>
  </record>
 
  
@@ -23,5 +34,65 @@
  <value key="favorite">false</value>
  <value key="rich_text">false</value>
  <value key="weight">20</value>
+</records>
+
+
+<records prefix="plone.app.mosaic.app_tiles.accordiontile"
+    interface="plone.app.mosaic.interfaces.ITile">
+    <value key="name">medialog.tiles.accordiontile</value>
+    <value key="label">Accordion Tile</value>
+    <value key="category">advanced</value>
+    <value key="tile_type">app</value>
+    <value key="default_value"></value>
+    <value key="read_only">false</value>
+    <value key="settings">true</value>
+    <value key="favorite">false</value>
+    <value key="rich_text">false</value>
+    <value key="weight">20</value>
+</records>
+
+
+<records prefix="plone.app.mosaic.app_tiles.colorboxtile"
+    interface="plone.app.mosaic.interfaces.ITile">
+    <value key="name">medialog.tiles.colorboxtile</value>
+    <value key="label">Colorbox</value>
+    <value key="category">advanced</value>
+    <value key="tile_type">app</value>
+    <value key="default_value"></value>
+    <value key="read_only">false</value>
+    <value key="settings">true</value>
+    <value key="favorite">false</value>
+    <value key="rich_text">false</value>
+    <value key="weight">20</value>
+</records>
+
+
+<records prefix="plone.app.mosaic.app_tiles.infotile"
+    interface="plone.app.mosaic.interfaces.ITile">
+    <value key="name">medialog.tiles.infotile</value>
+    <value key="label">Info  Tile</value>
+    <value key="category">advanced</value>
+    <value key="tile_type">app</value>
+    <value key="default_value"></value>
+    <value key="read_only">false</value>
+    <value key="settings">true</value>
+    <value key="favorite">false</value>
+    <value key="rich_text">false</value>
+    <value key="weight">20</value>
+</records>
+
+
+<records prefix="plone.app.mosaic.app_tiles.readmoretitile"
+    interface="plone.app.mosaic.interfaces.ITile">
+    <value key="name">medialog.tiles.readmoretile</value>
+    <value key="label">Readmore Tile</value>
+    <value key="category">advanced</value>
+    <value key="tile_type">app</value>
+    <value key="default_value"></value>
+    <value key="read_only">false</value>
+    <value key="settings">true</value>
+    <value key="favorite">false</value>
+    <value key="rich_text">false</value>
+    <value key="weight">20</value>
 </records>
 </registry>
