@@ -1,6 +1,6 @@
 <div class="flex container ${view/data/css_class}">
 	<div class="half">
-	   Tekst
+	   <div tal:content="view/body/output">
 	</div>
 	<div class="half">
 	   Image
