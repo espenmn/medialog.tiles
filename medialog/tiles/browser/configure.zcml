@@ -49,7 +49,7 @@
         title="Colorbox"
         description="Displays box with richtext"
         for="*"
-        schema=".tiles.ColorboxTile"
+        schema=".tiles.IColorboxTile"
         class=".tiles.ColorboxTile"
         template="templates/colorbox_tile.pt"
         permission="zope2.View"
