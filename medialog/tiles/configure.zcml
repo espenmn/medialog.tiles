@@ -6,33 +6,36 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="medialog.tiles">
-
-  <i18n:registerTranslations directory="locales" />
+  
+  
+  <i18n:registerTranslations directory="locales" />  
+    
+  <!-- Include configuration for dependencies listed in setup.py -->
   <includeDependencies package="." />
-
+ 
+ 
   <include package=".browser" />
 
+ 
+ 
+  <!-- Include behavior -->
+  <!--include file="behaviors.zcml" /-->
 
+  <!-- Register a resource directory from which we can deploy static
+   resource files. -->
+  <browser:resourceDirectory
+    name="medialog.tiles"
+    directory="resources" />
+
+
+  <!-- Register an extension profile to make the product installable in Plone -->
   <genericsetup:registerProfile
       name="default"
-      title="Mdialog Tiles"
+      title="Tiles for Plone"
       directory="profiles/default"
-      description="Installs the medialog.tiles add-on."
+      description="Extension profile for Tiles for Plone"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
-  <genericsetup:registerProfile
-      name="uninstall"
-      title="medialog.tiles (uninstall)"
-      directory="profiles/uninstall"
-      description="Uninstalls the medialog.tiles add-on."
-      provides="Products.GenericSetup.interfaces.EXTENSION"
-      post_handler=".setuphandlers.uninstall"
-      />
-
-
-  <utility
-      factory=".setuphandlers.HiddenProfiles"
-      name="medialog.tiles-hiddenprofiles" />
 
 </configure>

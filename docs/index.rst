@@ -1,5 +1,0 @@
-====================
-medialog.tiles
-====================
-
-User documentation
