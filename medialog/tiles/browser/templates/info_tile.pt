@@ -1,5 +1,5 @@
-<div class="infobox" background="bgimage.jpg">
-    <h3>Getting started</h3>
-    <p> Globeracer will set up everything you need to get started.</p>
-    <a class="roundbutton" href="/">Read more</<a>
+<div class="infobox" background="view/data/image_url">
+    <h3>${view/data/title}</h3>
+    <p tal:replace="structure view/data/body/output"/>
+    <a class="roundbutton" href="${view/data/link}">${view/data/moretext}</<a>
 </div>
