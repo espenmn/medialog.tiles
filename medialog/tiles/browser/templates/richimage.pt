@@ -3,9 +3,6 @@
 	   <div tal:content="structure view/data/body/output">
 	</div>
 	<div class="half" tal:define="scale view/data/scale">
-    <img alt="image" tiltle="illustraion image" tal:define="scales view/@@images;
-                     thumbnail python: scales.scale('image', scale=scale)"
-         tal:condition="thumbnail"
-         tal:attributes="src thumbnail/url" />
+    <img alt="image" tiltle="illustraion image" src="${tilecontext}/@@image/image/preview" />
   </div>
 </div>

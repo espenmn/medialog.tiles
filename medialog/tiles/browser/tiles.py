@@ -136,10 +136,12 @@ class MultiTile(PersistentTile):
         
     @property
     def data(self):
-        import pdb; pdb.set_trace()
         data = super(MultiTile, self).data
         return data
 
+    @property
+    def tilecontext(self):
+        return self.context
         
 class AccordionTile(MultiTile):
     """A tile that displays accordion"""
