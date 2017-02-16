@@ -6,7 +6,6 @@
     <img alt="image" tiltle="illustraion image" tal:define="scales view/@@images;
                      thumbnail python: scales.scale('image', scale=scale)"
          tal:condition="thumbnail"
-         tal:attributes="src thumbnail/url;
-                         width thumbnail/width;" />
+         tal:attributes="src thumbnail/url" />
   </div>
 </div>
