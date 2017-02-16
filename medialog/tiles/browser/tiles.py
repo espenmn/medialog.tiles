@@ -136,6 +136,7 @@ class MultiTile(PersistentTile):
         
     @property
     def data(self):
+        import pdb; pdb.set_trace()
         data = super(MultiTile, self).data
         return data
 
