@@ -18,7 +18,6 @@ from zope.i18nmessageid import MessageFactory
 from plone.app.textfield import RichText
 from plone.app.textfield.value import RichTextValue
 from plone.namedfile.field import NamedBlobFile
-from plone.app.vocabulary  import ImagesScales
 
 
 _ = MessageFactory('medialog.tiles')
@@ -47,7 +46,7 @@ class IMultiTile(model.Schema):
     scale = schema.Choice(
         title = _("Image Size", default=u"Image Size"),
         required = True,
-        vocabulary="ImagesScales",
+        vocabulary="plone.app.vocabulary.ImagesScales",
     )
     
 
