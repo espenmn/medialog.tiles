@@ -18,11 +18,36 @@ from zope.i18nmessageid import MessageFactory
 from plone.app.textfield import RichText
 from plone.app.textfield.value import RichTextValue
 from plone.namedfile.field import NamedBlobFile
+from plone.registry.interfaces import IRegistry
+from Products.CMFPlone.interfaces.controlpanel import IImagingSchema
+from zope.schema.interfaces import IContextSourceBinder
+from zope.schema.vocabulary import SimpleTerm
+from zope.schema.vocabulary import SimpleVocabulary
+from zope.component import getUtility
+from zope.interface import provider
 
 
 _ = MessageFactory('medialog.tiles')
 
- 
+
+def get_settings():
+    registry = getUtility(IRegistry)
+    settings = registry.forInterface(
+        IImagingSchema,
+        prefix="plone",
+        check=False
+    )
+    return settings
+    
+@provider(IContextSourceBinder)
+def image_scales(context):
+    values = []
+    settings = get_settings()
+    for allowed_size in settings.allowed_sizes:
+        name = allowed_size.split()[0]
+        if name not in ("thumb", "tile", "icon", "listing"):
+            values.append(SimpleTerm(name, name, _(allowed_size)))
+    return SimpleVocabulary(values)
  
     
 class IMultiTile(model.Schema):
@@ -44,9 +69,8 @@ class IMultiTile(model.Schema):
     )
     
     scale = schema.Choice(
-        title = _("Image Size", default=u"Image Size"),
-        required = True,
-        vocabulary="plone.app.vocabulary.ImagesScales",
+        title=_(u'Select maximum display size'),
+        source=image_scales
     )
     
 
