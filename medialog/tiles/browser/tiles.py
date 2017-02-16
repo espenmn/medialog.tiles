@@ -47,7 +47,7 @@ class IMultiTile(model.Schema):
     scale = schema.Choice(
         title = _("Image Size", default=u"Image Size"),
         required = True,
-        vocabulary="ImagesScales"),
+        vocabulary="ImagesScales",
     )
     
 
