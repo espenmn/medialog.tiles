@@ -139,9 +139,9 @@ class MultiTile(PersistentTile):
         data = super(MultiTile, self).data
         return data
 
-    @property
-    def tilecontext(self):
-        return self.context
+#    @property
+#    def tilecontext(self):
+#        return self.context
         
 class AccordionTile(MultiTile):
     """A tile that displays accordion"""
