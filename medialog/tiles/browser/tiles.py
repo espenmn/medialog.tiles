@@ -7,22 +7,9 @@
 #from plone.app.tiles.browser.edit import DefaultEditView
 from plone.memoize.view import memoize
 from plone.supermodel import model
-#from plone.directives import form
-#from plone.tiles import Tile
 from plone.tiles import PersistentTile
-#from plone.tiles.data import TransientTileDataManager
-#from plone.tiles.interfaces import ITileDataManager
 from zope import schema
 from zope.i18nmessageid import MessageFactory
-#from zope.interface import provider
-
-
-#????
-#from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-#from zope.publisher.browser import BrowserView
-#from zope.schema import getFields
-#from plone.tiles.interfaces import ITileType
-
 
 #from collective.z3cform.datagridfield import DataGridFieldFactory 
 #from collective.z3cform.datagridfield import DictRow
@@ -59,7 +46,7 @@ class IMultiTile(model.Schema):
     scale = schema.Choice(
         title = _("Image Size", default=u"Image Size"),
         required = True,
-        values=("preview", "large"),
+        vocabulary="plone.app.vocabulary.ImagesScales"),
     )
     
 
