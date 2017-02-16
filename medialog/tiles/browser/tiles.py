@@ -40,7 +40,7 @@ _ = MessageFactory('medialog.tiles')
     
 class IMultiTile(model.Schema):
     
-    css_class =schema.Choice(
+    css_class = schema.Choice(
         title = _("css class", default=u"CSS class"),
         required = False,
         description = _("help_css_class",
@@ -55,6 +55,13 @@ class IMultiTile(model.Schema):
     image = NamedBlobFile(
         title=_(u'Please, upload an image'),
     )
+    
+    scale = schema.Choice(
+        title = _("Image Size", default=u"Image Size"),
+        required = True,
+        values=("preview", "large"),
+    )
+    
 
 class IAccordionTile(model.Schema):
     
