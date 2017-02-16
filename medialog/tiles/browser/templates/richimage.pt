@@ -1,4 +1,6 @@
-<div class="flex container ${view/data/css_class}" tal:define="scales context/@@images;
+<div class="flex container ${view/data/css_class}" 
+                     tal:define="scale view/date/scale;
+                     scales view/@@images;
                      thumbnail python: scales.scale('image', scale=scale)">
 	<div class="half">
 	   <div tal:content="structure view/data/body/output">
