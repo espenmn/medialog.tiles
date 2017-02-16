@@ -1,25 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xml:lang="en"
-      lang="en"
-      xmlns:tal="http://xml.zope.org/namespaces/tal"
-      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-      i18n:domain="medialog.tiles">
-
- <body tal:define="scale view/data/scale">
-<img tal:define="scales view/@@images;
-                 image python: scales.scale('some_image', width=1920, height=600, direction='down');"
-     tal:attributes="src image/url;
-                     width image/width;
-                     height image/height;" />
-
 <div class="flex container ${view/data/css_class}">
 	<div class="half">
 	   <div tal:content="structure view/data/body/output">
 	</div>
-
+	<div class="half" tal:define="scale view/data/scale">
+    <img tal:define="scales view/@@images;
+                     thumbnail python: scales.scale('image', scale=scale)"
+         tal:condition="thumbnail"  src thumbnail/url />
+  </div>
 </div>
-
-
-  </body>
-
