@@ -7,10 +7,11 @@
       i18n:domain="medialog.tiles">
 
  <body tal:define="scale view/data/scale">
-    <img tal:define="scales view/@@images;
-                     thumbnail python: scales.scale('image', scale=scale)"
-         tal:condition="thumbnail"
-         tal:attributes="src thumbnail/url" />
+<img tal:define="scales view/@@images;
+                 image python: scales.scale('some_image', width=1920, height=600, direction='down');"
+     tal:attributes="src image/url;
+                     width image/width;
+                     height image/height;" />
 
 <div class="flex container ${view/data/css_class}">
 	<div class="half">
