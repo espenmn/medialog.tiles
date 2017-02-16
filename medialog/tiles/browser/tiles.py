@@ -155,13 +155,13 @@ class IInfoTile(model.Schema):
 class MultiTile(PersistentTile):
     """A tile that displays image and richtext"""
 
-    def __init__(self, context, request):
-        super(MultiTile, self).__init__(context, request)
+#    def __init__(self, context, request):
+#        super(MultiTile, self).__init__(context, request)
         
-    @property
-    def data(self):
-        data = super(MultiTile, self).data
-        return data
+#    @property
+#    def data(self):
+#        data = super(MultiTile, self).data
+#        return data
 
 #    @property
 #    def tilecontext(self):
