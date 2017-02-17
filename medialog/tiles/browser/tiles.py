@@ -147,6 +147,10 @@ class IInfoTile(model.Schema):
         title=_(u'Please, upload an image'),
     )
     
+    scale = schema.Choice(
+        title=_(u'Select maximum display size'),
+        source=image_scales
+    )
     link = schema.URI(title=u"Link",
         
     )
