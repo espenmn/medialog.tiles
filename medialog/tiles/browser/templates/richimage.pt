@@ -8,7 +8,7 @@
   <body tal:define="scale view/data/scale;
                     title view/data/title | nothing">
    
-    <div class="flex container ${view/data/css_class}">
+    <div class="flex ${view/data/css_class}">
         <div class="half">
            <div tal:content="structure view/data/body/output">
         </div>
