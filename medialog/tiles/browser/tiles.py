@@ -91,6 +91,11 @@ class IAccordionTile(model.Schema):
 
 class IColorboxTile(model.Schema):
     
+    color=schema.TextLine (
+        title=_(u'Color'),
+        required=False,
+    )
+    
     icon=schema.TextLine (
         title=_(u'Icon'),
         required=True,
