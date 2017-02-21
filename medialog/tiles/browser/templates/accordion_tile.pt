@@ -8,7 +8,7 @@
 <body>
 
   <div id="accordion" >
-    <div class="accordian_title flex"  accordion toggle"> 
+    <div class="accordian_title flex  accordion toggle"> 
 	  <div>${view/data/zone}</div>
 	  <div>${view/data/title}</div>
 	  <div><i class="fa fa-bars" aria-hidden="true"></i></div>
