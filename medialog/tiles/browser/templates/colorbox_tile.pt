@@ -6,8 +6,8 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       i18n:domain="medialog.tiles">
 <body>
-  <div class="colorboxes ${view/data/css_class}">
-	<div class="inner_colorbox">
+  <div class="colorbox ${view/data/css_class}">
+	<div class="innerbox">
 		<i class="fa iconfont ${view/data/icon}"> </i>
 		<h3>${view/data/title}</h3>
 		<div tal:replace="structure view/data/body/output" />
