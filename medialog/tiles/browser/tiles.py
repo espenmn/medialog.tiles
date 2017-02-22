@@ -89,8 +89,8 @@ class IAccordionTile(model.Schema):
         
     )
     
-    color=schema.TextLine (
-        title=_(u'Color'),
+    css_class=schema.TextLine (
+        title=_(u'CSS class'),
         required=False,
     )
 
