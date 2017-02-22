@@ -101,7 +101,7 @@ class IColorboxTile(model.Schema):
         required=False,
     )
     
-    icon=schema.TextLine (
+    iconfield=schema.TextLine (
         title=_(u'Icon'),
         required=True,
     )

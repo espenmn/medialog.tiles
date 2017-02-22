@@ -8,7 +8,7 @@
 <body>
   <div class="colorboxes ${view/data/css_class}">
 	<div class="inner_colorbox">
-		<i class="fa iconfont $(view/data/icon}"> </i>
+		<i class="fa iconfont $(view/data/iconfield}"> </i>
 		<h3>${view/data/title}</h3>
 		<div tal:replace="structure view/data/body/output" />
 	<a  class="roundbutton" href="${view/data/link}">${view/data/moretext}</a>
