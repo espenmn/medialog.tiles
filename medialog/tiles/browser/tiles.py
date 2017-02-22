@@ -96,7 +96,7 @@ class IAccordionTile(model.Schema):
 
 class IColorboxTile(model.Schema):
     
-    color=schema.TextLine (
+    css_class=schema.TextLine (
         title=_(u'Color'),
         required=False,
     )
