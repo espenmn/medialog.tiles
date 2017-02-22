@@ -4,7 +4,7 @@
       lang="en"
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-      i18n:domain="plone">
+      i18n:domain="medialog.tiles">
 <body>
   <div class="colorboxes ${view/data/css_class}">
 	<div class="inner_colorbox">
