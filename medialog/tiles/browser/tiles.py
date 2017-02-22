@@ -88,6 +88,11 @@ class IAccordionTile(model.Schema):
     body = RichText(title=u"Rich text",
         
     )
+    
+    color=schema.TextLine (
+        title=_(u'Color'),
+        required=False,
+    )
 
 class IColorboxTile(model.Schema):
     
