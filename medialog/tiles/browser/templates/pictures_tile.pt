@@ -6,10 +6,14 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       i18n:domain="plone">
   <body tal:define="scale view/data/scale;
-                    title view/data/title | nothing">
+                    title view/data/title | nothing;
+                    description view/data/description | nothing">
     <div class="${view/data/css_class}">
-        
-        <tal:repeat tal:repeat="image view/get_images" >
+        <div class="pictureinfo">
+           <h1>${title}</h1>
+           <h2>description</h2>
+        </div>
+        <div class="pictures" tal:repeat="image view/get_images" >
         
              <img tal:define="scales view/@@images;
                      thumbnail python: scales.scale('image', scale=scale)"
@@ -18,7 +22,7 @@
                          title title;
                          src thumbnail/url;
                          width thumbnail/width;" />
-        </tal:repeat>
+        </div>
     </div>
   </body>
 </html>
