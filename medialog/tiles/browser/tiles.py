@@ -239,7 +239,7 @@ class PicturesTile(MultiTile):
     def get_images(self):
         import pdb; pdb.set_trace()
         catalog = api.portal.get_tool(name='portal_catalog')
-        tagged_images = catalog(portal_type='Image', Subject=self.data.tags, sort_on='id')
+        tagged_images = catalog(portal_type='Image', Subject=self.data['tags'], sort_on='id')
         return [image.getObject()for image in tagged_images]
         
     
