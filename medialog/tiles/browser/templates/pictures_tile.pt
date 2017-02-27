@@ -15,7 +15,7 @@
         </div>
         <div class="pictures">
         <tal:repeat tal:repeat="image view/get_images" >
-        
+             x 
              <img alt="picture" tal:define="scales view/@@images;
                      thumbnail python: scales.scale('image', scale=scale)"
                      tal:condition="thumbnail"
