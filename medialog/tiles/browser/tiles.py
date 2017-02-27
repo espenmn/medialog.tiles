@@ -223,7 +223,7 @@ class IPicturesTile(model.Schema):
     images = schema.Tuple(
         title = _(u"image_text_pairs", 
             default=u"Image Text pairs"),
-        value_type= NamedBlobFile(title="Tittel"),
+        value_type= NamedBlobFile(),
         required=False
     )
     
