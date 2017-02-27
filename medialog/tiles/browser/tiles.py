@@ -192,7 +192,7 @@ class IPair(model.Schema):
     )
     
     
-class PicturesTile(PersistentTile):
+class IPicturesTile(PersistentTile):
     
     title =schema.TextLine(
         title = _("title", default=u"Title"),
