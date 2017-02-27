@@ -236,6 +236,7 @@ class MultiTile(PersistentTile):
 class PicturesTile(MultiTile):
     """A tile that displays pictures"""
     
+    @property
     def get_images(self):
         catalog = api.portal.get_tool(name='portal_catalog')
         tagged_images = catalog(portal_type='Image', Subject=self.data['tags'], sort_on='id')
