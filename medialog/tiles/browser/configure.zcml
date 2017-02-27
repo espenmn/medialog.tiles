@@ -81,13 +81,13 @@
         />
  
      <plone:tile
-        name="medialog.tiles.picturetile"
-        title="Picture tile"
-        description="Displays images"
+        name="medialog.tiles.picturestile"
+        title="Pictures tile"
+        description="Displays Pictures"
         for="*"
-        schema=".tiles.IPictureTile"
-        class=".tiles.PictureTile"
-        template="templates/picture_tile.pt"
+        schema=".tiles.IPicturesTile"
+        class=".tiles.PicturesTile"
+        template="templates/pictures_tile.pt"
         permission="zope2.View"
         add_permission="cmf.ModifyPortalContent"
         />

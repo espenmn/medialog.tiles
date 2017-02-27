@@ -236,7 +236,7 @@ class MultiTile(PersistentTile):
 #        super(MultiTile, self).__init__(context, request)
         
 
-class PictureTile(MultiTile):
+class PicturesTile(MultiTile):
     """A tile that displays pictures"""
         
 class AccordionTile(MultiTile):
