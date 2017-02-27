@@ -9,7 +9,7 @@
                     title view/data/title | nothing">
     <div class="${view/data/css_class}">
         
-        <!--tal:repeat tal:repeat="image view/data/get_images" >
+        <tal:repeat tal:repeat="image view/data/get_images" >
         
              <img tal:define="scales view/@@images;
                      thumbnail python: scales.scale('image', scale=scale)"
@@ -18,7 +18,7 @@
                          title title;
                          src thumbnail/url;
                          width thumbnail/width;" />
-        </tal:repeat-->
+        </tal:repeat>
     </div>
   </body>
 </html>
