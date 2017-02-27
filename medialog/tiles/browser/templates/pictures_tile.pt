@@ -5,11 +5,12 @@
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       i18n:domain="medialog.tiles">
-  <body tal:define="scale view/data/scale;
+  <body>
+
+  <section id="topslider" class="${view/data/css_class}"
+                tal:define="scale view/data/scale;
                     title view/data/title | nothing;
                     description view/data/description | nothing">
-
-  <section id="topslider" class="${view/data/css_class}">
   	<div class="slidetext-container">
  		<h1>${title}</h1>
         <h2>${description}</h2>
