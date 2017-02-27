@@ -11,8 +11,8 @@ from plone.tiles import PersistentTile
 from zope import schema
 from zope.i18nmessageid import MessageFactory
 
-#from collective.z3cform.datagridfield import DataGridFieldFactory 
-#from collective.z3cform.datagridfield import DictRow
+from collective.z3cform.datagridfield import DataGridFieldFactory 
+from collective.z3cform.datagridfield import DictRow
 
 from plone.directives import form
 
