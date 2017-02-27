@@ -237,10 +237,11 @@ class PicturesTile(MultiTile):
     """A tile that displays pictures"""
     
     def get_images(self):
-        catalog = api.portal.get_tool(name='portal_catalog')
-        tagged_images = catalog(portal_type='Image', Subject=self.data.tags, sort_on='id')
-        return [image.getObject()for image in tagged_images]
-        
+        try:
+            catalog = api.portal.get_tool(name='portal_catalog')
+            tagged_images = catalog(portal_type='Image', Subject=self.data.tags, sort_on='id')
+            return [image.getObject()for image in tagged_images]
+        return None
         
     
 class AccordionTile(MultiTile):
