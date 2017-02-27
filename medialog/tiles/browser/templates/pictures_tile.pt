@@ -16,7 +16,7 @@
         <div class="pictures">
         <tal:repeat tal:repeat="image view/get_images" >
              <?python import pdb; pdb.set_trace() ?>
-             <div    tal:define="scales view/@@images;
+             <div    tal:define="scales image/@@images;
                      thumbnail python: scales.scale('image', scale=scale)"
                      >
         
