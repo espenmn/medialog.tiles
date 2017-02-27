@@ -14,7 +14,7 @@
            <h2>description</h2>
         </div>
         <div class="pictures">
-        <tal:repeat tal:repeat="image view/data/get_images" >
+        <tal:repeat tal:repeat="image view/get_images" >
         
              <img alt="picture" tal:define="scales view/@@images;
                      thumbnail python: scales.scale('image', scale=scale)"
