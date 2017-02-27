@@ -1,1 +1,1 @@
-<a class="roundbutton" href="${view/data/link}">${view/data/moretext}</a>
+<a class="roundbutton ${view/data/css_class}" href="${view/data/link}">${view/data/moretext}</a>

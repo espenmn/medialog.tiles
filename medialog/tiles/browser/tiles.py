@@ -135,6 +135,11 @@ class IReadmoreTile(model.Schema):
     link = schema.URI(title=u"Link",
         
     )
+    
+    css_class=schema.TextLine (
+        title=_(u'Color'),
+        required=False,
+    )
 
 class IInfoTile(model.Schema):
     
@@ -165,6 +170,62 @@ class IInfoTile(model.Schema):
         
     )
     
+class IPair(model.Schema):
+    image = NamedBlobFile(
+        title=_(u'Please, upload an image'),
+    )
+
+    
+    image_title =schema.TextLine(
+        title = _("title", default=u"Title"),
+        required = False,
+        description = _("help_tittel",
+                      default="Title"),
+    )
+
+    image_description =schema.TextLine(
+        title = _("text", default=u"Text"),
+        required = False,
+        description = _("help_text",
+                      default="Text"),
+    )
+    
+    
+class PicturesTile(PersistentTile):
+    
+    title =schema.TextLine(
+        title = _("title", default=u"Title"),
+        required = False,
+        description = _("help_tittel",
+                      default="Title"),
+    )
+
+    description =schema.TextLine(
+        title = _("description", default=u"Description"),
+        required = False,
+        description = _("help_text",
+       
+    
+    css_class =schema.TextLine(
+        title = _("css class", default=u"CSS class"),
+        required = False,
+        description = _("help_css_class",
+                      default="CSS Class"),
+    )
+    
+    scale = schema.Choice(
+        title=_(u'Select maximum display size'),
+        source=image_scales
+    )
+    
+    form.widget(pairs=DataGridFieldFactory)
+    pairs = schema.List(
+        title = _(u"image_text_pairs", 
+            default=u"Image Text pairs"),
+        value_type= DictRow(schema=IPair),
+        required=False
+    )
+    
     
 class MultiTile(PersistentTile):
     """A tile that displays image and richtext"""
@@ -172,14 +233,9 @@ class MultiTile(PersistentTile):
 #    def __init__(self, context, request):
 #        super(MultiTile, self).__init__(context, request)
         
-#    @property
-#    def data(self):
-#        data = super(MultiTile, self).data
-#        return data
 
-#    @property
-#    def tilecontext(self):
-#        return self.context
+class PictureTile(MultiTile):
+    """A tile that displays pictures"""
         
 class AccordionTile(MultiTile):
     """A tile that displays accordion"""

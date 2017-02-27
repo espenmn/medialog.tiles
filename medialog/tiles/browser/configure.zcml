@@ -80,4 +80,16 @@
         add_permission="cmf.ModifyPortalContent"
         />
  
+     <plone:tile
+        name="medialog.tiles.picturetile"
+        title="Picture tile"
+        description="Displays images"
+        for="*"
+        schema=".tiles.IPictureTile"
+        class=".tiles.PictureTile"
+        template="templates/picture_tile.pt"
+        permission="zope2.View"
+        add_permission="cmf.ModifyPortalContent"
+        />
+ 
 </configure>
