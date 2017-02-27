@@ -16,11 +16,16 @@
         <div class="pictures">
         <tal:repeat tal:repeat="image view/get_images" >
              <?python import pdb; pdb.set_trace() ?>
+             <div    tal:define="scales view/@@images;
+                     thumbnail python: scales.scale('image', scale=scale)"
+                     >
+        
              <img alt="picture" tal:define="scales view/@@images;
                      thumbnail python: scales.scale('image', scale=scale)"
                      tal:condition="thumbnail"
                       tal:attributes="src thumbnail/url;
                          width thumbnail/width;" />
+            </div>
         </tal:repeat>
         </div>
     </div>
