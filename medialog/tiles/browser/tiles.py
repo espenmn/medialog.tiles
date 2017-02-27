@@ -14,6 +14,7 @@ from zope.i18nmessageid import MessageFactory
 #from collective.z3cform.datagridfield import DataGridFieldFactory 
 #from collective.z3cform.datagridfield import DictRow
 
+from plone.directives import form
 
 from plone.app.textfield import RichText
 from plone.app.textfield.value import RichTextValue
@@ -219,7 +220,7 @@ class PicturesTile(PersistentTile):
         source=image_scales
     )
     
-    model.widget(pairs=DataGridFieldFactory)
+    form.widget(pairs=DataGridFieldFactory)
     pairs = schema.List(
         title = _(u"image_text_pairs", 
             default=u"Image Text pairs"),
