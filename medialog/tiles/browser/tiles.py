@@ -219,7 +219,7 @@ class PicturesTile(PersistentTile):
         source=image_scales
     )
     
-    form.widget(pairs=DataGridFieldFactory)
+    model.widget(pairs=DataGridFieldFactory)
     pairs = schema.List(
         title = _(u"image_text_pairs", 
             default=u"Image Text pairs"),
