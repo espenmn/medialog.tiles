@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-#from plone import api
+from plone import api
 #from plone.app.tiles.browser.add import DefaultAddForm
 #from plone.app.tiles.browser.add import DefaultAddView
 #from plone.app.tiles.browser.edit import DefaultEditForm
@@ -220,11 +220,9 @@ class IPicturesTile(model.Schema):
         source=image_scales
     )
     
-    images = schema.List(
-        title = _(u"image_text_pairs", 
-            default=u"Image Text pairs"),
-        value_type= NamedBlobFile(),
-        required=False
+    tags =  schema.Choice( title = _(u"Or use a Tag"),
+        vocabulary = "plone.app.vocabularies.Keywords", 
+        required=False, 
     )
     
     
@@ -237,7 +235,14 @@ class MultiTile(PersistentTile):
 
 class PicturesTile(MultiTile):
     """A tile that displays pictures"""
+    
+    def get_images(self):
+        catalog = api.portal.get_tool(name='portal_catalog')
+        tagged_images = catalog(portal_type='Image', Subject=self.tags, sort_on='id')
+        return [image.getObject()for image in tagged_images]
         
+        
+    
 class AccordionTile(MultiTile):
     """A tile that displays accordion"""
     
