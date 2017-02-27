@@ -8,23 +8,41 @@
   <body tal:define="scale view/data/scale;
                     title view/data/title | nothing;
                     description view/data/description | nothing">
-    <div class="${view/data/css_class}">
-        <div class="pictureinfo">
-           <h1>${title}</h1>
-           <h2>description</h2>
-        </div>
-        <div class="pictures">
-        <tal:repeat tal:repeat="image view/get_images" >
-             <?python import pdb; pdb.set_trace() ?>
-             <div    tal:define="scales image/@@images;
-                     thumbnail python: scales.scale('image', scale=scale)"
-                     >
-        
-             <img alt="picture" tal:attributes="src thumbnail/url;
+
+  <section id="topslider"  class="${view/data/css_class}">
+  	<div class="slidetext-container">
+ 		<h1>${title}</h1>
+        <h2>description</h2>
+    </div>
+    <div id="main-slider" class="no-margin" >
+		<div id="pictureslider" 
+          <tal:repeat tal:repeat="image view/get_images" >
+           <tal:define tal:define="scales image/@@images;
+                       thumbnail python: scales.scale('image', scale=scale)">
+                <img alt="picture" tal:attributes="src thumbnail/url;
                          width thumbnail/width;" />
-            </div>
-        </tal:repeat>
+            </tal:define>
+          </tal:repeat>
         </div>
     </div>
+   </section>
+    
+    <script>$(function () {
+    $("#pictureslider").responsiveSlides({
+    maxwidth: 3000,
+    nav: false,
+    speed: 1500,
+    timeout: 7000,
+    pager: true,
+    prevText: "",  
+    nextText: "",    
+    });
+});
+$(window).resize(function(){
+   // Setting the heigth of the slides
+   $('#pictureslider').height($('#pictureslider').width()*55/100);
+}).resize();
+</script>
+
   </body>
 </html>
