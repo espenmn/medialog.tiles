@@ -16,7 +16,7 @@
         <div class="pictures">
         <tal:repeat tal:repeat="image view/get_images" >
         
-             <img tal:define="scales view/@@images;
+             <img alt="picture" tal:define="scales view/@@images;
                      thumbnail python: scales.scale('image', scale=scale)"
                      tal:condition="thumbnail"
                       tal:attributes="src thumbnail/url;
