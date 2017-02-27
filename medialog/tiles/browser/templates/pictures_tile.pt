@@ -12,7 +12,7 @@
   <section id="topslider" class="${view/data/css_class}">
   	<div class="slidetext-container">
  		<h1>${title}</h1>
-        <h2>description</h2>
+        <h2>${description}</h2>
     </div>
     <div id="main-slider" class="no-margin">
 		<div id="pictureslider" >
