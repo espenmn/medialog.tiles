@@ -203,8 +203,9 @@ class PicturesTile(PersistentTile):
     description =schema.TextLine(
         title = _("description", default=u"Description"),
         required = False,
-        description = _("help_text",
-       
+        description = _("help_description",
+                      default="Description"),
+    )
     
     css_class =schema.TextLine(
         title = _("css class", default=u"CSS class"),
