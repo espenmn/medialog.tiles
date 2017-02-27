@@ -9,6 +9,8 @@
                     title view/data/title | nothing">
     <div class="${view/data/css_class}">
         
+        <div tal:content="view/data/pairs" />
+        
         <!-- div class="half" tal:define="scale view/data/scale">
              <img tal:define="scales view/@@images;
                      thumbnail python: scales.scale('image', scale=scale)"

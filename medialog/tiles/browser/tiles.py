@@ -11,8 +11,8 @@ from plone.tiles import PersistentTile
 from zope import schema
 from zope.i18nmessageid import MessageFactory
 
-from collective.z3cform.datagridfield import DataGridFieldFactory 
-from collective.z3cform.datagridfield import DictRow
+#from collective.z3cform.datagridfield import DataGridFieldFactory 
+#from collective.z3cform.datagridfield import DictRow
 
 from plone.directives import form
 
@@ -220,11 +220,10 @@ class IPicturesTile(model.Schema):
         source=image_scales
     )
     
-    form.widget(pairs=DataGridFieldFactory)
-    pairs = schema.List(
+    images = schema.Tuple(
         title = _(u"image_text_pairs", 
             default=u"Image Text pairs"),
-        value_type= DictRow(schema=IPair),
+        value_type= NamedBlobFile(title="Tittel"),
         required=False
     )
     
