@@ -9,7 +9,7 @@
                     title view/data/title | nothing">
     <div class="${view/data/css_class}">
         
-        <div tal:content="view/data/pairs" />
+        <div tal:content="view/data" />
         
         <!-- div class="half" tal:define="scale view/data/scale">
              <img tal:define="scales view/@@images;
