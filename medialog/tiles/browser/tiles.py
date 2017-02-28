@@ -79,7 +79,7 @@ class IAccordionTile(model.Schema):
     
     zone=schema.TextLine (
          title=_(u'Zone'),
-        required=True,
+        required=False,
     )
     title=schema.TextLine (
         title=_(u'Title'),

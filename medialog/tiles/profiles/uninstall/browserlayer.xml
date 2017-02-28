@@ -2,6 +2,6 @@
 <layers>
   <layer
       name="medialog.tiles"
-      interface="medialog.tiles.interfaces.IMedialogTilesLayer"
+      remove="true"
       />
 </layers>

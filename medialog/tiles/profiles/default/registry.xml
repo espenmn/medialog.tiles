@@ -20,7 +20,7 @@
      <element>medialog.tiles.readmoretile</element>
  </value>
   <value purge="false">
-     <element>medialog.tiles.picturetile</element>
+     <element>medialog.tiles.picturestile</element>
  </value>
  </record>
 
