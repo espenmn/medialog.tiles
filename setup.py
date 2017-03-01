@@ -5,7 +5,7 @@ version = '0.1'
 
 setup(name='medialog.tiles',
       version=version,
-      description="tiles for mosaic",
+      description="Medialog tiles for mosaic",
       long_description=open("README.rst").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from

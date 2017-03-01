@@ -1,1 +1,8 @@
 *.pyc
+
+medialog.tiles.egg-info/requires.txt
+
+
+medialog.tiles.egg-info/
+
+medialog.tiles.egg-info/*

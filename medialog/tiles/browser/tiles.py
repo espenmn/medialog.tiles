@@ -104,7 +104,7 @@ class IColorboxTile(model.Schema):
     
     icon=schema.TextLine (
         title=_(u'Icon'),
-        required=True,
+        required=False,
     )
     
     title=schema.TextLine (
@@ -192,40 +192,6 @@ class IPair(model.Schema):
     )
     
     
-class IPicturesTile(model.Schema):
-    
-    title =schema.TextLine(
-        title = _("title", default=u"Title"),
-        required = False,
-        description = _("help_tittel",
-                      default="Title"),
-    )
-
-    description =schema.TextLine(
-        title = _("description", default=u"Description"),
-        required = False,
-        description = _("help_description",
-                      default="Description"),
-    )
-    
-    css_class =schema.TextLine(
-        title = _("css class", default=u"CSS class"),
-        required = False,
-        description = _("help_css_class",
-                      default="CSS Class"),
-    )
-    
-    scale = schema.Choice(
-        title=_(u'Select maximum display size'),
-        source=image_scales
-    )
-    
-    tags =  schema.Choice( title = _(u"Or use a Tag"),
-        vocabulary = "plone.app.vocabularies.Keywords", 
-        required=False, 
-    )
-    
-    
 class MultiTile(PersistentTile):
     """A tile that displays image and richtext"""
 
@@ -233,16 +199,6 @@ class MultiTile(PersistentTile):
 #        super(MultiTile, self).__init__(context, request)
         
 
-class PicturesTile(MultiTile):
-    """A tile that displays pictures"""
-    
-    @property
-    def get_images(self):
-        catalog = api.portal.get_tool(name='portal_catalog')
-        tagged_images = catalog(portal_type='Image', Subject=self.data['tags'], sort_on='id')
-        return [image.getObject()for image in tagged_images]
-        
-    
 class AccordionTile(MultiTile):
     """A tile that displays accordion"""
     

@@ -17,7 +17,6 @@
     </div>
     <div id="main-slider" class="no-margin">
 		<div id="pictureslider" >
-		    <?python import pdb; pdb.set_trace() ?>
           <tal:repeat tal:repeat="image view/get_images" >
            <tal:define tal:define="scales image/@@images;
                        thumbnail python: scales.scale('image', scale=scale)">
