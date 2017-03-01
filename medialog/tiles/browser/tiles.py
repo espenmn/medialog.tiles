@@ -118,11 +118,11 @@ class IColorboxTile(model.Schema):
     
     moretext=schema.TextLine (
         title=_(u'Readmore text'),
-        required=True,
+        required=False,
     )
     
     link = schema.URI(title=u"Link",
-        
+        required=False,
     )
     
 
