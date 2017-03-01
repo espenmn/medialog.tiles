@@ -199,15 +199,15 @@ class MultiTile(PersistentTile):
 #        super(MultiTile, self).__init__(context, request)
         
 
-class AccordionTile(MultiTile):
+class AccordionTile(PersistentTile):
     """A tile that displays accordion"""
     
-class ColorboxTile(MultiTile):
+class ColorboxTile(PersistentTile):
     """A tile that displays a box"""
     
-class InfoTile(MultiTile):
+class InfoTile(PersistentTile):
     """A tile that displays image and richtext"""
     
-class ReadmoreTile(MultiTile):
+class ReadmoreTile(PersistentTile):
     """A tile that displays image and richtext"""
     
