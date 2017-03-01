@@ -7,7 +7,7 @@
 	<a tal:condition="view/data/moretext" class="roundbutton" href="${view/data/link}">${view/data/moretext}</a>
 	
 	<a tal:condition="not: view/data/moretext"  href="${view/data/link">
-	   <img src="../bilder/arrow_right-1.png">
+	   <i class="icon-arrow_right"> </>
 	</a>
 	</div>
   </div>
