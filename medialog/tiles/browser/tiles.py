@@ -78,7 +78,7 @@ class IMultiTile(model.Schema):
         title = _("width class"),
         required = False,
         description = _("help_width_class"),
-        values=("full", "medium"),
+        values=("full", "medium", "two", "three", "four"),
     )
     
 
@@ -106,7 +106,7 @@ class IAccordionTile(model.Schema):
         title = _("width class"),
         required = False,
         description = _("help_width_class"),
-        values=("full", "medium"),
+        values=("full", "medium", "two", "three", "four"),
     )
     
 
@@ -144,7 +144,7 @@ class IColorboxTile(model.Schema):
         title = _("width class"),
         required = False,
         description = _("help_width_class"),
-        values=("full", "medium"),
+        values=("full", "medium", "two", "three", "four"),
     )
     
 
@@ -168,7 +168,7 @@ class IReadmoreTile(model.Schema):
         title = _("width class"),
         required = False,
         description = _("help_width_class"),
-        values=("full", "medium"),
+        values=("full", "medium", "two", "three", "four"),
     )
     
 
@@ -205,7 +205,7 @@ class IInfoTile(model.Schema):
         title = _("width class"),
         required = False,
         description = _("help_width_class"),
-        values=("full", "medium"),
+        values=("full", "medium", "two", "three", "four"),
     )
     
     
