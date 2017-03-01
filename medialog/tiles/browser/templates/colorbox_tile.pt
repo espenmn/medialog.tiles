@@ -1,5 +1,5 @@
 
-  <div class="colorbox ${view/data/css_class}">
+  <div class="colorbox ${view/data/css_class} ${view/data/width_class}">
 	<div class="innerbox">
 		<i tal:condition="view/data/icon" class="fa iconfont ${view/data/icon}"> </i>
 		<h3>${view/data/title}</h3>

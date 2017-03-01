@@ -7,7 +7,7 @@
       i18n:domain="plone">
   <body tal:define="scale view/data/scale;
                     title view/data/title | nothing">
-    <div class="flex ${view/data/css_class}">
+    <div class="flex ${view/data/css_class} ${view/data/width_class}">
         <div class="half bodytext">
            <div tal:content="structure view/data/body/output" />
         </div>

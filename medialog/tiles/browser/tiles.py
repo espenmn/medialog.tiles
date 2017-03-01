@@ -74,6 +74,13 @@ class IMultiTile(model.Schema):
         source=image_scales
     )
     
+    width_class = schema.Choice(
+        title = _("width class"),
+        required = False,
+        description = _("help_width_class"),
+        values=("full", "medium"),
+    )
+    
 
 class IAccordionTile(model.Schema):
     
@@ -94,6 +101,14 @@ class IAccordionTile(model.Schema):
         title=_(u'CSS class'),
         required=False,
     )
+    
+    width_class = schema.Choice(
+        title = _("width class"),
+        required = False,
+        description = _("help_width_class"),
+        values=("full", "medium"),
+    )
+    
 
 class IColorboxTile(model.Schema):
     
@@ -125,6 +140,13 @@ class IColorboxTile(model.Schema):
         required=False,
     )
     
+    width_class = schema.Choice(
+        title = _("width class"),
+        required = False,
+        description = _("help_width_class"),
+        values=("full", "medium"),
+    )
+    
 
 class IReadmoreTile(model.Schema):
     
@@ -141,6 +163,14 @@ class IReadmoreTile(model.Schema):
         title=_(u'Color'),
         required=False,
     )
+    
+    width_class = schema.Choice(
+        title = _("width class"),
+        required = False,
+        description = _("help_width_class"),
+        values=("full", "medium"),
+    )
+    
 
 class IInfoTile(model.Schema):
     
@@ -171,24 +201,11 @@ class IInfoTile(model.Schema):
         
     )
     
-class IPair(model.Schema):
-    image = NamedBlobFile(
-        title=_(u'Please, upload an image'),
-    )
-
-    
-    image_title =schema.TextLine(
-        title = _("title", default=u"Title"),
+    width_class = schema.Choice(
+        title = _("width class"),
         required = False,
-        description = _("help_tittel",
-                      default="Title"),
-    )
-
-    image_description =schema.TextLine(
-        title = _("text", default=u"Text"),
-        required = False,
-        description = _("help_text",
-                      default="Text"),
+        description = _("help_width_class"),
+        values=("full", "medium"),
     )
     
     

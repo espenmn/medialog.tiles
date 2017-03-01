@@ -7,7 +7,7 @@
       i18n:domain="medialog.tiles">
   <body>
 
-  <section id="topslider" class="${view/data/css_class}"
+  <section id="topslider" class="${view/data/css_class} ${view/data/width_class}"
                 tal:define="scale view/data/scale;
                     title view/data/title | nothing;
                     description view/data/description | nothing">
