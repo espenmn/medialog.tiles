@@ -2,6 +2,16 @@
   <div class="colorbox ${view/data/css_class} ${view/data/width_class}">
 	<div class="innerbox">
 		<i tal:condition="view/data/icon" class="fa iconfont ${view/data/icon}"> </i>
+		<tal:image tal:define="scale view/data/scale">
+             <img  tal:condition="view/data/icon" tal:define="scales view/@@images;
+                     thumbnail python: scales.scale('image', scale=scale)"
+                     tal:condition="thumbnail"
+                      tal:attributes="alt title;
+                         title title;
+                         src thumbnail/url;
+                         width thumbnail/width;" />
+        </tal:image>
+		
 		<h3>${view/data/title}</h3>
 		<div  tal:replace="structure view/data/body/output" />
 	<a tal:condition="view/data/moretext" class="roundbutton" href="${view/data/link}">${view/data/moretext}</a>

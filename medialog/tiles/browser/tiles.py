@@ -122,6 +122,17 @@ class IColorboxTile(model.Schema):
         required=False,
     )
     
+    image = NamedBlobFile(
+        title=_(u'Please, upload an image'),
+        required=False,
+    
+    )
+    
+    scale = schema.Choice(
+        title=_(u'Select maximum display size'),
+        source=image_scales
+    )
+    
     title=schema.TextLine (
         title=_(u'Title'),
         required=True,
