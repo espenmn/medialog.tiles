@@ -14,7 +14,7 @@
                      thumbnail python: scales.scale('image', scale=scale)"
                      tal:condition="thumbnail"
                       tal:attributes="alt title;
-                         title title;
+                         title view/data/title;
                          src thumbnail/url;
                          width thumbnail/width;" />
         </tal:image>
