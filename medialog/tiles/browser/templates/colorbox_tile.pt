@@ -13,7 +13,7 @@
              <img  tal:condition="view/data/image" tal:define="scales view/@@images;
                      thumbnail python: scales.scale('image', scale=scale)"
                      tal:condition="thumbnail"
-                      tal:attributes="alt title;
+                      tal:attributes="alt view/data/title;
                          title view/data/title;
                          src thumbnail/url;
                          width thumbnail/width;" />
