@@ -58,7 +58,7 @@ class IMultiTile(model.Schema):
         required = False,
         description = _("help_css_class",
                       default="CSS Class"),
-        values=("left", "right", "left dark", "right dark", "left grey", "right grey", "center", "text-on-image", "text-on-image center"),
+        values=("left", "right", "left dark", "right dark", "left grey", "right grey", "center", "text-on-image", "text-on-image black", "text-on-image center"),
     )
     
     body = RichText(title=u"Rich text",
