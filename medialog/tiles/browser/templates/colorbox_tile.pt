@@ -1,9 +1,16 @@
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en"
+      lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="plone">
+<body tal:define="scale view/data/scale">
   <div class="colorbox ${view/data/css_class} ${view/data/width_class}">
 	<div class="innerbox">
 		<i tal:condition="view/data/icon" class="fa iconfont ${view/data/icon}"> </i>
 		<tal:image tal:define="scale view/data/scale">
-             <img  tal:condition="view/data/icon" tal:define="scales view/@@images;
+             <img  tal:condition="view/data/image" tal:define="scales view/@@images;
                      thumbnail python: scales.scale('image', scale=scale)"
                      tal:condition="thumbnail"
                       tal:attributes="alt title;
@@ -21,3 +28,5 @@
 	</a>
 	</div>
   </div>
+</body>
+</html>
