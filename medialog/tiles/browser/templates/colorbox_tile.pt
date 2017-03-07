@@ -26,7 +26,7 @@
 
 	</div>
 	
-	<a tal:condition="python: view.data.moretext==''"  href="${view/data/link}">
+	<a tal:condition="python: not:view.data.moretext"  href="${view/data/link}">
 	   <!--i class="icon-arrow_right"> </i-->
 	   <i tal:condition="view/data/icon" class="fa iconfont ${view/data/icon}"> </i>
 		<tal:image tal:define="scale view/data/scale">
