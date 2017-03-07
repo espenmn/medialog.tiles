@@ -13,7 +13,7 @@
        <div class="infobox-text">
         <h3>${view/data/title}</h3>
         <div tal:replace="structure view/data/body/output" />
-        <a  tal:condition="python: not: view.data.icon" class="roundbutton" href="${view/data/link}">${view/data/moretext}</a>
+        <a  tal:condition="python: not:view.data.icon" class="roundbutton" href="${view/data/link}">${view/data/moretext}</a>
        
       </div>
       </div>
