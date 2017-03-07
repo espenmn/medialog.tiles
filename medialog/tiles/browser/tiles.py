@@ -202,7 +202,7 @@ class IInfoTile(model.Schema):
     
     moretext=schema.TextLine (
         title=_(u'Readmore text'),
-        required=True,
+        required=False,
     )
     
     image = NamedBlobFile(
