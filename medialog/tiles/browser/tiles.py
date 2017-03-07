@@ -170,11 +170,7 @@ class IReadmoreTile(model.Schema):
         required=True,
     )
     
-    icon=schema.TextLine (
-        title=_(u'Icon'),
-        required=False,
-    )
-    
+
     link = schema.URI(title=u"Link",
         
     )
@@ -220,6 +216,12 @@ class IInfoTile(model.Schema):
     link = schema.URI(title=u"Link",
         
     )
+    
+    icon=schema.TextLine (
+        title=_(u'Icon'),
+        required=False,
+    )
+    
     
     width_class = schema.Choice(
         title = _("width class"),
