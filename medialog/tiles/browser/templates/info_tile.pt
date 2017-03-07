@@ -14,10 +14,7 @@
         <h3>${view/data/title}</h3>
         <div tal:replace="structure view/data/body/output" />
         <a  tal:condition="python: not: view.data.icon" class="roundbutton" href="${view/data/link}">${view/data/moretext}</a>
-        <a  class="pat-plone-modal infoikon" tal:condition="view/data/icon" 
-               href="${view/data/link}" >
-               <i  class="fa iconfont ${view/data/icon}"> </i>
-        </a>
+       
       </div>
       </div>
     </tal:define>
