@@ -170,6 +170,11 @@ class IReadmoreTile(model.Schema):
         required=True,
     )
     
+    icon=schema.TextLine (
+        title=_(u'Icon'),
+        required=False,
+    )
+    
     link = schema.URI(title=u"Link",
         
     )
