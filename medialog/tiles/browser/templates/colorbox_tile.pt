@@ -7,7 +7,7 @@
       i18n:domain="plone">
 <body tal:define="scale view/data/scale">
   <div class="colorbox ${view/data/css_class} ${view/data/width_class}">
-	<div class="innerbox">
+	<div class="innerbox" tal:condition="view/data/linkbox" >
 		<i tal:condition="view/data/icon" class="fa iconfont ${view/data/icon}"> </i>
 		<tal:image tal:define="scale view/data/scale">
              <img  tal:condition="view/data/image" tal:define="scales view/@@images;
@@ -21,12 +21,12 @@
 		
 		<h3>${view/data/title}</h3>
 		<div  tal:replace="structure view/data/body/output" />
-	<a tal:condition="view/data/moretext" class="roundbutton" href="${view/data/link}">${view/data/moretext}</a>
-	
+	    <a tal:condition="view/data/moretext" class="roundbutton" href="${view/data/link}">${view/data/moretext}</a>
+	</div>
 
 
-	
 	<a tal:condition="view/data/linkbox"  href="${view/data/link}">
+	 <div class="innerbox">
 	   <!--i class="icon-arrow_right"> </i-->
 	   <i tal:condition="view/data/icon" class="fa iconfont ${view/data/icon}"> </i>
 		<tal:image tal:define="scale view/data/scale">
@@ -41,7 +41,7 @@
 		
 		<h3>${view/data/title}</h3>
 		<div  tal:replace="structure view/data/body/output" />
-	   
+	   </div>
 	  </a>
 	</div>
   </div>
