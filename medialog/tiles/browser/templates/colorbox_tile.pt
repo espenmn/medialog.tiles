@@ -24,9 +24,9 @@
 	<a tal:condition="view/data/moretext" class="roundbutton" href="${view/data/link}">${view/data/moretext}</a>
 	
 
-	</div>
+
 	
-	<a tal:condition="python: not:view.data.moretext"  href="${view/data/link}">
+	<a tal:condition="view/data/linkbox"  href="${view/data/link}">
 	   <!--i class="icon-arrow_right"> </i-->
 	   <i tal:condition="view/data/icon" class="fa iconfont ${view/data/icon}"> </i>
 		<tal:image tal:define="scale view/data/scale">
@@ -43,6 +43,7 @@
 		<div  tal:replace="structure view/data/body/output" />
 	   
 	  </a>
+	</div>
   </div>
 </body>
 </html>

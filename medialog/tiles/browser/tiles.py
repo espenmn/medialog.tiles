@@ -151,6 +151,10 @@ class IColorboxTile(model.Schema):
         required=False,
     )
     
+    linkbox = schema.Bool(title=u"Link whole box",
+        required=False,
+    )
+    
     width_class = schema.Choice(
         title = _("width class"),
         required = False,
