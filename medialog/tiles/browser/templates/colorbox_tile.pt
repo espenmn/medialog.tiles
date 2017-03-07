@@ -43,7 +43,7 @@
 		<div  tal:replace="structure view/data/body/output" />
 	   </div>
 	  </a>
-	</div>
+ 
   </div>
 </body>
 </html>
