@@ -222,6 +222,10 @@ class IInfoTile(model.Schema):
         required=False,
     )
     
+    height=schema.Text(
+        title=_(u'Height'),
+        required=False,
+    )
     
     width_class = schema.Choice(
         title = _("width class"),

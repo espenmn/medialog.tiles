@@ -9,7 +9,7 @@
                     title view/data/title | nothing">
     <tal:define tal:define="scales view/@@images;
                      thumbnail python: scales.scale('image', scale=scale)">
-      <div class="infobox ${view/data/width_class}" style="background-image:url(${thumbnail/url})">
+      <div class="infobox ${view/data/width_class}" style="background-image:url(${thumbnail/url}); height:${view/data/heigh">
        <div class="infobox-text">
         <h3>${view/data/title}</h3>
         <div tal:replace="structure view/data/body/output" />
