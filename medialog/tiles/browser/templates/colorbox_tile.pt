@@ -6,8 +6,9 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       i18n:domain="plone">
 <body tal:define="scale view/data/scale">
-  <div class="colorbox ${view/data/css_class} ${view/data/width_class}">
-	<div class="innerbox" tal:condition="not:view/data/linkbox" >
+  <div class="colorbox ${view/data/css_class} ${view/data/width_class}" 
+        tal:condition="not:view/data/linkbox" >
+	<div class="innerbox" >
 		<i tal:condition="view/data/icon" class="fa iconfont ${view/data/icon}"> </i>
 		<tal:image tal:define="scale view/data/scale">
              <img  tal:condition="view/data/image" tal:define="scales view/@@images;
@@ -25,7 +26,8 @@
 	</div>
 
 
-	<a tal:condition="view/data/linkbox"  href="${view/data/link}">
+   <a tal:condition="view/data/linkbox"  href="${view/data/link}">
+	<div class="colorbox ${view/data/css_class} ${view/data/width_class}" >
 	 <div class="innerbox">
 	   <!--i class="icon-arrow_right"> </i-->
 	   <i tal:condition="view/data/icon" class="fa iconfont ${view/data/icon}"> </i>
@@ -42,7 +44,8 @@
 		<h3>${view/data/title}</h3>
 		<div  tal:replace="structure view/data/body/output" />
 	   </div>
-	  </a>
+	</div>
+  </a>
  
   </div>
 </body>
