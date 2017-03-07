@@ -222,7 +222,7 @@ class IInfoTile(model.Schema):
         required=False,
     )
     
-    height=schema.Text(
+    height=schema.TextLine(
         title=_(u'Height'),
         required=False,
     )
