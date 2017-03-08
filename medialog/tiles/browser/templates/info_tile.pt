@@ -11,7 +11,7 @@
                      thumbnail python: scales.scale('image', scale=scale)">
       <div class="infobox ${view/data/width_class}" style="background-image:url(${thumbnail/url}); height:${view/data/height}">
        <div class="infobox-text">
-        <h3>${view/data/title}${view/data/uid}</h3>
+        <h3>${view/data/title}${view/data}</h3>
         <div tal:replace="structure view/data/body/output" />
         <a  tal:condition="not: view/data/icon" class="roundbutton" href="${view/data/link}">${view/data/moretext}</a>
         
