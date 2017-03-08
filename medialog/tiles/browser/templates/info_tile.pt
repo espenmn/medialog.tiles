@@ -14,11 +14,17 @@
         <h3>${view/data/title}</h3>
         <div tal:replace="structure view/data/body/output" />
         <a  tal:condition="not: view/data/icon" class="roundbutton" href="${view/data/link}">${view/data/moretext}</a>
-        <a  class="pat-plone-modal infoikon" tal:condition="view/data/icon" 
-               href="${view/data/link}" >
+        
+        <tal:modal tal:condition="view/data/icon" >
+            <a  class="pat-plone-modal infoikon" 
+               href="#${title}-modal" >
                <i  class="fa iconfont ${view/data/icon}"> </i>
-        </a>
-       
+            </a>
+             <div id="${title}-modal" class="modal-info-popup">
+             <iframe src="${view/data/link}" width="1000" height="563" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                </iframe>
+            </div>
+         </tal:modal>
       </div>
       </div>
     </tal:define>
