@@ -15,7 +15,7 @@
         <div tal:replace="structure view/data/body/output" />
         <a  tal:condition="not: view/data/icon" class="roundbutton" href="${view/data/link}">${view/data/moretext}</a>
         
-        <tal:modal tal:condition="view/data/icon" tal:define="uid view/data/uid">
+        <tal:modal tal:condition="view/data/icon" tal:define="uid view/data/body/uid">
             <a  class="pat-plone-modal infoikon" 
                href="#${uid}-modal" >
                <i  class="fa iconfont ${view/data/icon}"> </i>
