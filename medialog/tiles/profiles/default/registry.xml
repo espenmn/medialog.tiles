@@ -19,7 +19,9 @@
  <value purge="false">
      <element>medialog.tiles.readmoretile</element>
  </value>
- 
+  <value purge="false">
+     <element>medialog.tiles.riktekst</element>
+ </value>
  </record>
 
  
@@ -37,6 +39,20 @@
  <value key="weight">20</value>
 </records>
 
+
+<records prefix="plone.app.mosaic.app_tiles.riktekst"
+ interface="plone.app.mosaic.interfaces.ITile">
+ <value key="name">medialog.tiles.rikteksttile</value>
+ <value key="label">Riktext  Tile</value>
+ <value key="category">advanced</value>
+ <value key="tile_type">app</value>
+ <value key="default_value"></value>
+ <value key="read_only">false</value>
+ <value key="settings">true</value>
+ <value key="favorite">false</value>
+ <value key="rich_text">false</value>
+ <value key="weight">1</value>
+</records>
 
 <records prefix="plone.app.mosaic.app_tiles.accordiontile"
     interface="plone.app.mosaic.interfaces.ITile">

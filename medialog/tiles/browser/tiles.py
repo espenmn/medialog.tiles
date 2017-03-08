@@ -109,11 +109,31 @@ class IAccordionTile(model.Schema):
         values=("full", "medium", "two", "three", "four"),
     )
     
+class IRiktekstTile(model.Schema):
+    
+    css_class=schema.TextLine (
+        title=_(u'CSS class'),
+        required=False,
+    )
+    
+    
+    body = RichText(title=u"Rich text",
+        
+    )
+    
+    
+    width_class = schema.Choice(
+        title = _("width class"),
+        required = False,
+        description = _("help_width_class"),
+        values=("full", "medium", "two", "three", "four"),
+    )
+
 
 class IColorboxTile(model.Schema):
     
     css_class=schema.TextLine (
-        title=_(u'Color'),
+        title=_(u'CSS class'),
         required=False,
     )
     
@@ -176,7 +196,7 @@ class IReadmoreTile(model.Schema):
     )
     
     css_class=schema.TextLine (
-        title=_(u'Color'),
+        title=_(u'CSS class'),
         required=False,
     )
     
@@ -241,6 +261,9 @@ class MultiTile(PersistentTile):
 #    def __init__(self, context, request):
 #        super(MultiTile, self).__init__(context, request)
         
+class RiktekstTile(PersistentTile):
+    """A tile that displays accordion"""
+    
 
 class AccordionTile(PersistentTile):
     """A tile that displays accordion"""

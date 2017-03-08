@@ -33,6 +33,18 @@
         />
 
     <plone:tile
+        name="medialog.tiles.rikteksttile"
+        title="Riktext tile"
+        description="Displays richtext"
+        for="*"
+        schema=".tiles.IRiktekstTile"
+        class=".tiles.RiktekstTile"
+        template="templates/riktekst.pt"
+        permission="zope2.View"
+        add_permission="cmf.ModifyPortalContent"
+        />
+
+    <plone:tile
         name="medialog.tiles.accordiontile"
         title="Accordion tile"
         description="Displays accordion"
