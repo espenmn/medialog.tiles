@@ -11,16 +11,16 @@
                      thumbnail python: scales.scale('image', scale=scale)">
       <div class="infobox ${view/data/width_class}" style="background-image:url(${thumbnail/url}); height:${view/data/height}">
        <div class="infobox-text">
-        <h3>${view/data/title}${view/data/uid}</h3>
+        <h3>${view/data/title}</h3>
         <div tal:replace="structure view/data/body/output" />
         <a  tal:condition="not: view/data/icon" class="roundbutton" href="${view/data/link}">${view/data/moretext}</a>
         
         <tal:modal tal:condition="view/data/icon" >
             <a  class="pat-plone-modal infoikon" 
-               href="#modal" >
+               href="#${view/data/uid}-modal" >
                <i  class="fa iconfont ${view/data/icon}"> </i>
             </a>
-             <div id="modal" class="modal-info-popup" style="display: none">
+             <div id="${view/data/uid}-modal" class="modal-info-popup" style="display: none">
              <iframe src="${view/data/link}" width="1000" height="563" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
                 </iframe>
             </div>
