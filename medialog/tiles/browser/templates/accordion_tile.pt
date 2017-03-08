@@ -15,7 +15,7 @@
 	</div>
    
 	<div class="accordiondiv hidden">
-		<div tal:replace="structure view/data/body/output" /> 
+		<div tal:replace="structure view/data/body/raw" /> 
 	</div>
   </div>
 

@@ -21,7 +21,7 @@
         </tal:image>
 		
 		<h3>${view/data/title}</h3>
-		<div  tal:replace="structure view/data/body/output" />
+		<div  tal:replace="structure view/data/body/raw" />
 	    <a tal:condition="view/data/moretext" class="roundbutton" href="${view/data/link}">${view/data/moretext}</a>
 	</div>
    </div>
@@ -42,7 +42,7 @@
         </tal:image>
 		
 		<h3>${view/data/title}</h3>
-		<div  tal:replace="structure view/data/body/output" />
+		<div  tal:replace="structure view/data/body/raw" />
 	   </div>
 	</div>
   </a>
