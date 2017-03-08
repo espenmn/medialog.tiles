@@ -17,10 +17,10 @@
         
         <tal:modal tal:condition="view/data/icon" >
             <a  class="pat-plone-modal infoikon" 
-               href="#${view/data/uid}-modal" >
+               href="#${view/data/UID}-modal" >
                <i  class="fa iconfont ${view/data/icon}"> </i>
             </a>
-             <div id="${view/data/uid}-modal" class="modal-info-popup" style="display: none">
+             <div id="${view/data/UID}-modal" class="modal-info-popup" style="display: none">
              <iframe src="${view/data/link}" width="1000" height="563" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
                 </iframe>
             </div>
