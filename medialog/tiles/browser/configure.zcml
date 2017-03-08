@@ -39,7 +39,7 @@
         for="*"
         schema=".tiles.IRiktekstTile"
         class=".tiles.RiktekstTile"
-        template="templates/riktekst.pt"
+        template="templates/riktekst_tile.pt"
         permission="zope2.View"
         add_permission="cmf.ModifyPortalContent"
         />
