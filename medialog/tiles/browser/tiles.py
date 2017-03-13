@@ -126,7 +126,7 @@ class IRiktekstTile(model.Schema):
         title = _("width class"),
         required = False,
         description = _("help_width_class"),
-        values=("full", "medium", "two", "three", "four"),
+        values=("full", "medium", "two", "three", "four", "five"),
     )
 
 
