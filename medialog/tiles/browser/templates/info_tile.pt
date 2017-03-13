@@ -17,7 +17,7 @@
 
         <tal:modal tal:condition="view/data/icon" tal:define="mid view/id">
             <a  class="pat-plone-modal infoikon"
-               href="#${mid}-modal" >
+               href="#${mid}-modal"   data-pat-plone-modal="width: 1050" >
                <i  class="fa iconfont ${view/data/icon}"> </i>
             </a>
              <div id="${mid}-modal" class="modal-info-popup" style="display: none">
