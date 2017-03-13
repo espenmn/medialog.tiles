@@ -17,13 +17,13 @@
 
         <tal:modal tal:condition="view/data/icon" tal:define="mid view/id">
             <a  class="pat-plone-modal infoikon"
-               href="#${mid}-modal"   data-pat-plone-modal="width: 1032" >
+               href="${view/data/link}">  <!--#${mid}-modal"-->   <!-- data-pat-plone-modal="width: 1032" -->
                <i  class="fa iconfont ${view/data/icon}"> </i>
             </a>
-             <div id="${mid}-modal" class="modal-info-popup" style="display: none">
+             <!-- div id="${mid}-modal" class="modal-info-popup" style="display: none">
              <iframe src="${view/data/link}" width="1000" height="563" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
                 </iframe>
-            </div>
+            </div-->
          </tal:modal>
       </div>
       </div>
