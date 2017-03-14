@@ -16,7 +16,7 @@
         <a  tal:condition="not: view/data/icon" class="roundbutton" href="${view/data/link}">${view/data/moretext}</a>
 
         <tal:modal tal:condition="view/data/icon" tal:define="mid view/id">
-            <a  class="infoikon"
+            <a  class="infoikon xmodal"
                href="${view/data/link}">  <!--#${mid}-modal"-->   <!-- data-pat-plone-modal="width: 1032" -->
                <i  class="fa iconfont ${view/data/icon}"> </i>
             </a>
