@@ -212,7 +212,7 @@ class IInfoTile(model.Schema):
     
     title=schema.TextLine (
         title=_(u'Title'),
-        required=True,
+        required=False,
     )
     
     
@@ -233,6 +233,7 @@ class IInfoTile(model.Schema):
         title=_(u'Select maximum display size'),
         source=image_scales
     )
+    
     link = schema.URI(title=u"Link",
         
     )
@@ -254,6 +255,10 @@ class IInfoTile(model.Schema):
         values=("full", "medium", "two", "three", "four"),
     )
     
+    css_class=schema.TextLine (
+        title=_(u'CSS class'),
+        required=False,
+    )
     
 class MultiTile(PersistentTile):
     """A tile that displays image and richtext"""

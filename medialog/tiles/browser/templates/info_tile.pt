@@ -9,14 +9,14 @@
                     title view/data/title | nothing">
     <tal:define tal:define="scales view/@@images;
                      thumbnail python: scales.scale('image', scale=scale)">
-      <div class="infobox ${view/data/width_class}" style="background-image:url(${thumbnail/url}); height:${view/data/height}">
+      <div class="infobox ${view/data/width_class} ${view/data/css_class"" style="background-image:url(${thumbnail/url}); height:${view/data/height}">
        <div class="infobox-text">
-        <h4>${view/data/title}</h4>
+        <h4 tal:condition="view/data/title">${view/data/title}</h4>
         <div tal:replace="structure view/data/body/raw" />
         <a  tal:condition="not: view/data/icon" class="roundbutton" href="${view/data/link}">${view/data/moretext}</a>
 
         <tal:modal tal:condition="view/data/icon" tal:define="mid view/id">
-            <a  class="infoikon xmodal"
+            <a  class="infoikon"
                href="${view/data/link}">  <!--#${mid}-modal"-->   <!-- data-pat-plone-modal="width: 1032" -->
                <i  class="fa iconfont ${view/data/icon}"> </i>
             </a>
